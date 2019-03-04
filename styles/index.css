@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 70%;
+    margin: 50px 15% 0;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 24px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    padding: 10px 0;
+    margin: 0 25%;
+}
