@@ -18,30 +18,36 @@ body {
 
 #navbar {
     color: purple;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .navbar-item {
     display: inline-block;
     padding: 5px;
-    /* font-size: 50px; */
+    font-family: "Raleway";
     font-weight: 600;
 }
 
 .navbar-item a {
     text-decoration: none;
+    border: transparent 1px solid;
+    padding: 5px;
 }
 
+.navbar-item, 
 .navbar-item a:visited {
     color: purple;
 }
 
+.navbar-item a:focus,
 .navbar-item a:hover {
-    color: green;
+    color: chartreuse;
+    border: chartreuse 1px solid;
 }
 
-.navbar-item a:active {
-    color: green;
+.selected a {
+    border: purple 1px solid;
+    border-radius: 2px;
 }
 
 /*******INTRODUCTION*******/
@@ -85,14 +91,20 @@ body {
 #top-ten-movies {
     font-family: "Raleway";
     text-align: left;
+    margin-bottom: 10rem;
 }
 
 #top-ten-movies__description {
-    
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 #top-ten-movies__list {
-    
+    margin: 10px 15%;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 ol {
@@ -104,6 +116,10 @@ ol {
 .top-ten-movies__list__group {
     float: left;
     width: 50%;
+}
+
+.top-ten-movies__list__group li {
+    list-style-position: inside;
 }
 
 /*******TOP TEN THINGS LIST*******/
