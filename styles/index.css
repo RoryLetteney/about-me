@@ -74,15 +74,18 @@ body {
 }
 
 #name {
+    font-size: 2rem;
     margin-bottom: 20px;
     text-decoration: underline;
 }
 
 #job-title {
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
 #bio {
+    font-size: .8rem;
     line-height: 24px;
 }
 
