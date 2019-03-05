@@ -1,3 +1,5 @@
+/*******GENERAL*******/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,33 @@
 body {
     width: 70%;
     margin: 50px 15% 0;
-    text-align: center;
+    text-align: center;    
+    background-color: aliceblue;
+    color: purple;
+    overflow-y: scroll;
+}
+
+/*******INTRODUCTION*******/
+
+.outer-gradient-border-div {
+    background-image: linear-gradient(lavender, purple);
+}
+
+.inner-gradient-border-div {
+    width: 98%;
+    background-color: aliceblue;
+    margin: auto;
+}
+
+.introduction {
+    font-family: "Raleway";    
+    padding: 2em;
+    font-weight: 600;
+
+    /*This portion adds a gradient color to the text*/
+    background: -webkit-linear-gradient(lavender, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #name {
@@ -21,6 +49,36 @@ body {
 #bio {
     line-height: 24px;
 }
+
+/*******TOP TEN LIST*******/
+
+#top-ten {
+    margin: 2rem 0;
+    font-family: "Raleway";
+    text-align: left;
+}
+
+#top-ten__description {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#top-ten__list {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+ol {
+    list-style: decimal;
+}
+
+#top-ten__list__group {
+    
+}
+
+/*******FOOTER*******/
 
 #footer {
     position: absolute;
