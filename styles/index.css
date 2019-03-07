@@ -16,7 +16,7 @@ body {
 
 /*******NAVBAR*******/
 
-#navbar {
+.navbar {
     color: purple;
     margin-bottom: 2rem;
 }
@@ -70,41 +70,44 @@ body {
     /*This portion adds a gradient color to the text*/
     background: -webkit-linear-gradient(lavender, purple);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#name {
+.name {
     font-size: 2rem;
     margin-bottom: 20px;
     text-decoration: underline;
 }
 
-#job-title {
+.job-title {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
-#bio {
+.bio {
     font-size: .8rem;
     line-height: 24px;
 }
 
 /*******TOP TEN MOVIES LIST*******/
 
-#top-ten-movies {
+.top-ten-movies {
     font-family: "Raleway";
     text-align: left;
     margin-bottom: 10rem;
 }
 
-#top-ten-movies__description {
+.top-ten-movies__description {
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-#top-ten-movies__list {
+.top-ten-movies__list {
     margin: 10px 15%;
     font-size: 1.2rem;
     font-weight: 600;
@@ -127,19 +130,19 @@ ol {
 
 /*******TOP TEN THINGS LIST*******/
 
-#top-ten-things {
+.top-ten-things {
     font-family: "Raleway";
     text-align: left;
 }
 
-#top-ten-things__description {
+.top-ten-things__description {
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-#top-ten-things__list {
+.top-ten-things__list {
     margin: 10px 15%;
     font-size: 1.2rem;
     font-weight: 600;
@@ -157,7 +160,7 @@ ul {
 
 /*******FOOTER*******/
 
-#footer {
+.footer {
     position: absolute;
     bottom: 0;
     left: 0;
