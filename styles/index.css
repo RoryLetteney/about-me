@@ -14,11 +14,34 @@ body {
     overflow-y: scroll;
 }
 
+/*********LAYOUT*********/
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.navbar {
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
+.main {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+}
+
+.footer {
+    grid-column: 1/-1;
+    grid-row: 4;
+}
+
 /*******NAVBAR*******/
 
 .navbar {
     color: purple;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 .navbar-item {
@@ -90,72 +113,6 @@ body {
 .bio {
     font-size: .8rem;
     line-height: 24px;
-}
-
-/*******TOP TEN MOVIES LIST*******/
-
-.top-ten-movies {
-    font-family: "Raleway";
-    text-align: left;
-    margin-bottom: 10rem;
-}
-
-.top-ten-movies__description {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.top-ten-movies__list {
-    margin: 10px 15%;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-ol {
-    list-style: decimal;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.top-ten-movies__list__group {
-    float: left;
-    width: 50%;
-}
-
-.top-ten-movies__list__group li {
-    list-style-position: inside;
-}
-
-/*******TOP TEN THINGS LIST*******/
-
-.top-ten-things {
-    font-family: "Raleway";
-    text-align: left;
-}
-
-.top-ten-things__description {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.top-ten-things__list {
-    margin: 10px 15%;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-ul {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.top-ten-things__list__group {
-    float: left;
-    width: 50%;
 }
 
 /*******FOOTER*******/
