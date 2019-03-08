@@ -129,7 +129,25 @@ body {
     grid-column: 1/3;
     grid-row: main-s/main-e;
 
+    display: grid;
+    justify-items: center;
+
     margin-top: 50px;
+    text-align: left;
+}
+
+.sidebar ul {
+    width: 100%;
+}
+
+.sidebar-link {
+    padding: 10px 0 10px 35px;
+    font-family: "Raleway";
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background-color: lightgrey;
 }
 
 /*******INTRODUCTION*******/
