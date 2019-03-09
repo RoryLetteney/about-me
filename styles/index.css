@@ -1,162 +1,65 @@
-/*******GENERAL*******/
-
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Raleway";
 }
 
 body {
-    text-align: center;    
     background-color: aliceblue;
-    color: purple;
-    /* overflow-y: scroll; */
 }
 
-::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: purple;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: chartreuse;
-}
-
-::-webkit-scrollbar-track {
-    background: rgb(205, 205, 255);
-    border-radius: 5px;
-    box-shadow: inset 0 0 3px grey;
-}
-
-/*********LAYOUT*********/
-
-.layout {
-
-}
+/*******NAVBAR************/
 
 .navbar {
-    
-}
-
-.sidebar {
-    
-}
-
-.main {
-    
-}
-
-.inner-gradient-border-div {
-    
-}
-
-.techs-used {
-    
-}
-
-.tech-item {
-    
-}
-
-.footer {
-
-}
-
-/*******NAVBAR*******/
-
-.navbar {
-    color: purple;
-    margin-top: 10px;
+    height: 40px;
+    text-align: center;
 }
 
 .navbar-item {
     display: inline-block;
-    font-family: "Raleway";
+    font-size: 1.2em;
     font-weight: 600;
+    padding-top: 13px;
 }
 
 .navbar-item a {
-    text-decoration: none;
+    padding: 13px;
     border: transparent 1px solid;
-    padding: 5px;
-}
-
-.navbar-item, 
-.navbar-item a:visited {
+    border-radius: 2px;
     color: purple;
 }
 
-.navbar-item a:focus,
-.navbar-item a:hover {
-    color: chartreuse;
-    border: chartreuse 1px solid;
-}
-
+.navbar-item a:hover,
 .selected a {
-    border: purple 1px solid;
-    border-radius: 2px;
+    background-color: chartreuse;
 }
 
-/*************SIDEBAR************/
+/*********GRADIENT BOX********/
 
-.sidebar {
-    margin-top: 50px;
-    text-align: left;
-    width: 20%;
-    float: left;
+.outer-gradient-border-div,
+.inner-gradient-border-div {
+    height: 200px;
 }
-
-.sidebar-link {
-    padding: 10px 0 10px 35px;
-    font-family: "Raleway";
-    cursor: pointer;
-}
-
-.sidebar-link:hover {
-    background-color: lightgrey;
-}
-
-/************MAIN**********/
-
-main {
-    width: 80%;
-    margin: auto;
-    /* float: right; */
-}
-
-/*******INTRODUCTION*******/
 
 .outer-gradient-border-div {
-    background-image: linear-gradient(lavender, purple);
-    height: 300px;
-    margin-top: 100px;
+    width:  800px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, lavender, purple);
 }
 
 .inner-gradient-border-div {
-    width: 98%;
-    height: 300px;
     background-color: aliceblue;
-    margin: 0 auto;
-}
-
-.inner-gradient-border-div img {
-    float: left;
-    margin-left: 50px;
+    width: 750px;
+    margin: auto;
 }
 
 .introduction {
-    font-family: "Raleway";
-    font-weight: 600;
-    width: calc(100% - 250px);
-    margin: 0 auto;
-    padding-top: 50px;
-    clear: left;
-
-    background: -webkit-linear-gradient(lavender, purple);
+    background: -webkit-linear-gradient(rgb(154, 154, 255), purple);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
@@ -164,51 +67,84 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
+/*******INTRODUCTION*******/
+
+.profile-pic {
+    float: left;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.introduction {
+    line-height: 30px;
+    width: 500px;
+    margin-left: 250px;
+}
+
 .name {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-decoration: underline;
+    font-size: 3em;
 }
 
 .job-title {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 2em;
 }
 
 .bio {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 1.2em;
 }
 
-video {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-/***********TECHS USED***********/
+/************TECHS USED*************/
 
 .techs-used {
-    width: 60%;
-    height: 200px;
-    margin: 50px auto 0;
+    margin: 100px auto 0;
+    width: 80%;
 }
 
-@keyframes mymove {
-    from {top: 0px;}
-    to {top: 200px;}
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% {opacity: 1; }
+}
+
+@keyframes slide {
+    from, to { margin-top: 0px; }
+    50% {margin-top: 200px; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg);}
 }
 
 .tech-item {
-    position: relative;
-    animation: mymove 2s infinite;
+    float: right;
 }
 
-/*******FOOTER*******/
+.tech-item:nth-child(odd) {
+    float: left;
+}
+
+.tech-item:nth-child(3n+0) {
+    animation: fade 3s infinite linear;
+    clear: right;
+}
+
+.tech-item:nth-child(3n+1) {
+    animation: slide 4s infinite linear;
+    clear: left;
+}
+
+.tech-item:nth-child(3n+2) {
+    animation: rotate 2s infinite linear;
+    clear: both;
+}
+
+/**************FOOTER**************/
 
 .footer {
-    line-height: 50px;
     position: absolute;
     bottom: 0;
     width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #555;
 }
