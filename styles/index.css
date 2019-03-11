@@ -1,176 +1,71 @@
-/*******GENERAL*******/
-
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Raleway";
 }
 
 body {
-    text-align: center;    
     background-color: aliceblue;
-    color: purple;
-    overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
+main {
+    box-sizing: border-box;
+    min-height: calc(100vh - 120px);
+    padding-bottom: 40px;
 }
 
-::-webkit-scrollbar-thumb {
-    background: purple;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: chartreuse;
-}
-
-::-webkit-scrollbar-track {
-    background: rgb(205, 205, 255);
-    border-radius: 5px;
-    box-shadow: inset 0 0 3px grey;
-}
-
-/*********LAYOUT*********/
-
-.layout {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: [nav-s] 50px [nav-e main-s] 1fr 1fr [main-e footer-s] 50px [footer-e];
-}
+/*******NAVBAR************/
 
 .navbar {
-    grid-column: 1/-1;
-    grid-row: nav-s/nav-e;
-}
-
-.main {
-    grid-column: 3/11;
-    grid-row: main-s/main-e;
-
-    display: grid;
-    grid-template-rows: repeat(autofill, 1fr);
-    grid-template-columns: [s] 1fr [e];
-
-    margin-bottom: 32px;
-    min-height: calc(100vh - 132px);
-}
-
-.inner-gradient-border-div {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-
-.techs-used {
-    display: grid;
-    grid-template-columns: repeat(autofill, 1fr);
-    grid-template-rows: [s] 1fr [e];
-    grid-column-gap: 20px;
-    justify-items: center;
-    align-items: center;
-}
-
-.tech-item {
-    grid-row: s/e;
-}
-
-.footer {
-    grid-column: 1/-1;
-    grid-row: footer-s/footer-e;
-
-    display: grid;
-    align-content: center;
-}
-
-/*******NAVBAR*******/
-
-.navbar {
-    color: purple;
-}
-
-.navbar ul {
     height: 40px;
-    margin-top: 10px;
+    text-align: center;
 }
 
 .navbar-item {
     display: inline-block;
-    font-family: "Raleway";
+    font-size: 1.2em;
     font-weight: 600;
+    padding-top: 13px;
 }
 
 .navbar-item a {
-    text-decoration: none;
+    padding: 13px;
     border: transparent 1px solid;
-    padding: 5px;
-}
-
-.navbar-item, 
-.navbar-item a:visited {
+    border-radius: 2px;
     color: purple;
 }
 
-.navbar-item a:focus,
-.navbar-item a:hover {
-    color: chartreuse;
-    border: chartreuse 1px solid;
-}
-
+.navbar-item a:hover,
 .selected a {
-    border: purple 1px solid;
-    border-radius: 2px;
+    background-color: chartreuse;
 }
 
-/*************SIDEBAR************/
+/*********GRADIENT BOX********/
 
-.sidebar {
-    grid-column: 1/3;
-    grid-row: main-s/main-e;
-
-    display: grid;
-    justify-items: center;
-
-    margin-top: 50px;
-    text-align: left;
+.outer-gradient-border-div,
+.inner-gradient-border-div {
+    height: 200px;
 }
-
-.sidebar ul {
-    width: 100%;
-}
-
-.sidebar-link {
-    padding: 10px 0 10px 35px;
-    font-family: "Raleway";
-    cursor: pointer;
-}
-
-.sidebar-link:hover {
-    background-color: lightgrey;
-}
-
-/*******INTRODUCTION*******/
 
 .outer-gradient-border-div {
-    background-image: linear-gradient(lavender, purple);
-    height: 300px;
-    margin-top: 50px;
+    width:  800px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, lavender, purple);
 }
 
 .inner-gradient-border-div {
-    width: 98%;
-    height: 300px;
     background-color: aliceblue;
+    width: 750px;
     margin: auto;
 }
 
 .introduction {
-    font-family: "Raleway";
-    font-weight: 600;
-    width: 80%;
-
-    background: -webkit-linear-gradient(lavender, purple);
+    background: -webkit-linear-gradient(rgb(154, 154, 255), purple);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -o-background-clip: text;
@@ -178,39 +73,97 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+/*******INTRODUCTION*******/
+
+.profile-pic {
+    float: left;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.introduction {
+    line-height: 30px;
+    width: 500px;
+    margin-left: 250px;
+}
+
 .name {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-decoration: underline;
+    font-size: 3em;
 }
 
 .job-title {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 2em;
 }
 
 .bio {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 1.2em;
 }
 
-/***********TECHS USED***********/
+/************TECHS USED*************/
 
 .techs-used {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 60%;
-    height: 110px;
-    margin: 0 auto;
+    margin: 100px auto 0;
+    width: 80%;
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% {opacity: 1; }
+}
+
+@keyframes slide {
+    from, to { margin-top: 0px; }
+    50% {margin-top: 200px; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg);}
 }
 
 .tech-item {
-    width: 80px;
-    margin: 15px 0;
+    float: right;
 }
 
-/*******FOOTER*******/
+.tech-item:nth-child(odd) {
+    float: left;
+}
+
+.tech-item:nth-child(3n+0) {
+    animation: fade 3s infinite linear;
+    clear: right;
+}
+
+.tech-item:nth-child(3n+1) {
+    animation: slide 4s infinite linear;
+    clear: left;
+}
+
+.tech-item:nth-child(3n+2) {
+    animation: rotate 2s infinite linear;
+    clear: both;
+}
+
+/*****************VIDEO*****************/
+
+.video {
+    float: left;
+}
+
+/**************JS Questions**************/
+
+.js-questions {
+    font-size: 2em;
+    line-height: 30px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+/**************FOOTER**************/
 
 .footer {
-    height: 50px;
+    min-height: 20px;
+    width: 100%;
+    text-align: center;
+    color: #555;
 }
