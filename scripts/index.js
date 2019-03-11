@@ -17,3 +17,12 @@ if (!confirmed) {
 } else {
   alert('People from ' + home + ' sound awesome!');
 }
+
+
+//ADDS THE ANSWERS TO THE LIST ITEMS ON THE QUESTIONS.HTML PAGE
+var questions = document.getElementsByClassName('js-questions');
+
+questions[0].innerHTML += username;
+questions[1].innerHTML += home;
+questions[2].innerHTML += favoriteFood;
+questions[3].innerHTML += favoriteVacSpot;
