@@ -198,9 +198,15 @@ body {
 
 .techs-used {
     overflow-x: scroll;
+    overflow-y: hidden;
     width: 60%;
-    height: 100px;
+    height: 110px;
     margin: 0 auto;
+}
+
+.tech-item {
+    width: 80px;
+    margin: 15px 0;
 }
 
 /*******FOOTER*******/
