@@ -13,6 +13,12 @@ body {
     background-color: aliceblue;
 }
 
+main {
+    box-sizing: border-box;
+    min-height: calc(100vh - 120px);
+    padding-bottom: 40px;
+}
+
 /*******NAVBAR************/
 
 .navbar {
@@ -138,13 +144,26 @@ body {
     clear: both;
 }
 
+/*****************VIDEO*****************/
+
+.video {
+    float: left;
+}
+
+/**************JS Questions**************/
+
+.js-questions {
+    font-size: 2em;
+    line-height: 30px;
+    width: 30%;
+    margin: 0 auto;
+}
+
 /**************FOOTER**************/
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    min-height: 20px;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
     color: #555;
 }
