@@ -153,10 +153,33 @@ main {
 /**************JS Questions**************/
 
 .js-questions {
-    font-size: 2em;
+    font-size: 1.2em;
     line-height: 30px;
-    width: 30%;
-    margin: 0 auto;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/***********QUIZ******************/
+
+.title,
+.quiz-user,
+.quiz-instructions {
+    width: 50%;
+    margin: auto;
+}
+
+.title {
+    line-height: 3em;
+    font-size: 3em;
+}
+
+.quiz-user {
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.quiz-instructions {
+    font-size: 1.5em;
 }
 
 /**************FOOTER**************/

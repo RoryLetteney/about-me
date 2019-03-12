@@ -1,3 +1,4 @@
+'use strict';
 var username = prompt('What is your name? ');
 var home = prompt('In which city do you live? ');
 var favoriteFood = prompt('What is your favorite food? ');
