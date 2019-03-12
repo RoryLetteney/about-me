@@ -182,6 +182,22 @@ main {
     font-size: 1.5em;
 }
 
+ol.js-questions .quiz-question {
+    list-style-position: inside;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.green {
+    background-color: green;
+    color: #fff;
+}
+
+.red {
+    background-color: red;
+    font-weight: 600;
+}
+
 /**************FOOTER**************/
 
 .footer {
