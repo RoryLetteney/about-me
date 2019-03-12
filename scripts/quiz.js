@@ -1,4 +1,5 @@
 'use strict';
+var quizUser;
 var quizHtml = document.getElementById('js-questions');
 var quizQuestionsHtml = document.getElementsByClassName('quiz-question');
 var quizAnswersHtml = document.getElementsByClassName('quiz-answer');
@@ -10,9 +11,11 @@ var quiz = [
   'Every baseball team has at least one pitcher, correct?',
   'People require different amounts of time to achieve the same knowledge.'
 ];
-var quizUser = prompt('What is your name, user?');
 
 var quizQuestions = () => {
+  quizUser = prompt('What is your name, user?');
+  quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
+
   var answer1 = prompt(quiz[0]);
   answer1 = answer1.toLowerCase();
   if (answer1 === 'yes' || answer1 === 'y') {
@@ -64,8 +67,6 @@ var quizQuestions = () => {
   }
   quizQuestionsHtml[4].innerHTML += `&nbsp;&nbsp;&nbsp;${answer5}`;
 };
-
-quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
 
 quizHtml.innerHTML = `<li class='quiz-question'>${quiz[0]}</li>`;
 quizHtml.innerHTML += `<li class='quiz-question'>${quiz[1]}</li>`;
