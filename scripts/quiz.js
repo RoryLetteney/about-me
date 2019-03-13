@@ -39,86 +39,90 @@ var quiz = [
   ]
 ];
 
-quizUser = prompt('What is your name, user?');
-quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
+var runQuiz = function() {
+  quizUser = prompt('What is your name, user?');
+  quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
 
-for (var yn = 0; yn < quiz[0][0].length; yn++) {
-  guess = prompt(quiz[0][0][yn]);
-  quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][0][yn]}</li>`;
-  guess = guess.toLowerCase();
-  if (quiz[0][1][yn].includes(guess)) {
-    console.log(quiz[0][0][yn], guess, ': Correct!');
-    quizQuestionsHtml[currentQuestion].classList.toggle('green');
-    score++;
-  } else {
-    console.log(quiz[0][0][yn], guess, ': Incorrect!');
-    quizQuestionsHtml[currentQuestion].classList.toggle('red');
-  }
-  quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
-  currentQuestion++;
-}
-
-for (var num = 0; num < 1; num++) {
-  var attempts = 4;
-  var guesses = 0;
-  var correctAnswer = quiz[1][1].toString();
-  quizHtml.innerHTML += `<li class='quiz-question'>${quiz[1][0]}</li>`;
-  while(guesses < attempts) {
-    guess = prompt(quiz[1][0]);
-    if (guess === quiz[1][1].toString()) {
-      console.log(quiz[1][0], guess, ': Correct!');
-      quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
+  for (var yn = 0; yn < quiz[0][0].length; yn++) {
+    guess = prompt(quiz[0][0][yn]);
+    quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][0][yn]}</li>`;
+    guess = guess.toLowerCase();
+    if (quiz[0][1][yn].includes(guess)) {
+      console.log(quiz[0][0][yn], guess, ': Correct!');
       quizQuestionsHtml[currentQuestion].classList.toggle('green');
-      currentQuestion++;
       score++;
-      guesses = attempts;
-      break;
-    } else if (guesses >= attempts || correctAnswer !== guess) {
-      console.log(quiz[1][0], guess, ': Incorrect!');
-      if (guess > correctAnswer) {
-        alert(`Incorrect! The correct answer is lower than ${guess}.`);
+    } else {
+      console.log(quiz[0][0][yn], guess, ': Incorrect!');
+      quizQuestionsHtml[currentQuestion].classList.toggle('red');
+    }
+    quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
+    currentQuestion++;
+  }
+
+  for (var num = 0; num < 1; num++) {
+    var attempts = 4;
+    var guesses = 0;
+    var correctAnswer = quiz[1][1].toString();
+    quizHtml.innerHTML += `<li class='quiz-question'>${quiz[1][0]}</li>`;
+    while(guesses < attempts) {
+      guess = prompt(quiz[1][0]);
+      if (guess === quiz[1][1].toString()) {
+        console.log(quiz[1][0], guess, ': Correct!');
+        quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
+        quizQuestionsHtml[currentQuestion].classList.toggle('green');
+        currentQuestion++;
+        score++;
+        guesses = attempts;
+        break;
+      } else if (guesses >= attempts || correctAnswer !== guess) {
+        console.log(quiz[1][0], guess, ': Incorrect!');
+        if (guess > correctAnswer) {
+          alert(`Incorrect! The correct answer is lower than ${guess}.`);
+        } else {
+          alert(`Incorrect! The correct answer is higher than ${guess}.`);
+        }
+        guesses++;
+      } else if (guesses >= attempts && correctAnswer !== guess) {
+        quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
+        quizQuestionsHtml[currentQuestion].classList.toggle('red');
+        currentQuestion++;
+        break;
       } else {
-        alert(`Incorrect! The correct answer is higher than ${guess}.`);
+        guesses++;
       }
-      guesses++;
-    } else if (guesses >= attempts && correctAnswer !== guess) {
-      quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
-      quizQuestionsHtml[currentQuestion].classList.toggle('red');
-      currentQuestion++;
-      break;
-    } else {
-      guesses++;
     }
   }
-}
 
-var pointsGained = false;
-quizHtml.innerHTML += `<li class='quiz-question'>${quiz[2][0]}</li>`;
-for (var i = 0; i < 4; i++) {
-  var correctGuess = false;
-  guess = prompt(quiz[2][0]);
-  guess = guess.toString().toLowerCase();
-  for (var mc = 0; mc < quiz[2][1].length; mc++) {
-    if (guess === quiz[2][1][mc]) {
-      pointsGained = true;
-      correctGuess = true;
-      alert('Correct!');
+  var pointsGained = false;
+  quizHtml.innerHTML += `<li class='quiz-question'>${quiz[2][0]}</li>`;
+  for (var i = 0; i < 4; i++) {
+    var correctGuess = false;
+    guess = prompt(quiz[2][0]);
+    guess = guess.toString().toLowerCase();
+    for (var mc = 0; mc < quiz[2][1].length; mc++) {
+      if (guess === quiz[2][1][mc]) {
+        pointsGained = true;
+        correctGuess = true;
+        alert('Correct!');
+      }
+    }
+    if (correctGuess === false) {
+      alert('Incorrect! Guess again!');
+    }
+    if (i === 3) {
+      for (var a = 0; a < quiz[2][1].length; a++) {
+        quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${quiz[2][1][a]}`;
+      }
+      if (pointsGained === true) {
+        quizQuestionsHtml[currentQuestion].classList.toggle('green');
+        score++;
+      } else {
+        quizQuestionsHtml[currentQuestion].classList.toggle('red');
+      }
     }
   }
-  if (correctGuess === false) {
-    alert('Incorrect! Guess again!');
-  }
-  if (i === 3) {
-    for (var a = 0; a < quiz[2][1].length; a++) {
-      quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${quiz[2][1][a]}`;
-    }
-    if (pointsGained === true) {
-      quizQuestionsHtml[currentQuestion].classList.toggle('green');
-      score++;
-    } else {
-      quizQuestionsHtml[currentQuestion].classList.toggle('red');
-    }
-  }
-}
 
-scoreEl.innerHTML += (' ' + score);
+  scoreEl.innerHTML += (' ' + score);
+};
+
+setTimeout(() => runQuiz(), 5000);
