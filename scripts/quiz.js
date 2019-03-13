@@ -2,7 +2,6 @@
 var quizUser;
 var quizHtml = document.getElementById('js-questions');
 var quizQuestionsHtml = document.getElementsByClassName('quiz-question');
-var quizAnswersHtml = document.getElementsByClassName('quiz-answer');
 var quizUserHtml = document.getElementById('quiz-user');
 var quiz = [
   'Do HTML, CSS, and JavaScript use objects?',
@@ -12,74 +11,35 @@ var quiz = [
   'People require different amounts of time to achieve the same knowledge.'
 ];
 
-var quizQuestions = () => {
-  quizUser = prompt('What is your name, user?');
-  quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
+quizUser = prompt('What is your name, user?');
+quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
 
-  var answer1 = prompt(quiz[0]);
-  answer1 = answer1.toLowerCase();
-  if (answer1 === 'yes' || answer1 === 'y') {
-    console.log(quiz[0], answer1,': Correct!');
-    quizQuestionsHtml[0].classList.toggle('green');
+for (var i = 0; i < quiz.length; i++) {
+  quizHtml.innerHTML += `<li class='quiz-question'>${quiz[i]}</li>`;
+  var guess = prompt(quiz[i]);
+  guess = guess.toLowerCase();
+  if ( i === 1 ) {
+    if (guess === 'no' || guess === 'n') {
+      console.log(quiz[i], guess, ': Correct!');
+      quizQuestionsHtml[i].classList.toggle('green');
+    } else {
+      console.log(quiz[i], guess, ': Incorrect!');
+      quizQuestionsHtml[i].classList.toggle('red');
+    }
+  } else if ( i === 2 ) {
+    if (guess === 'no' || guess === 'n' || guess === 'yes' || guess === 'y') {
+      console.log(quiz[i], guess, ': Correct!');
+      quizQuestionsHtml[i].classList.toggle('green');
+    } else {
+      console.log(quiz[i], guess, ': Incorrect!');
+      quizQuestionsHtml[i].classList.toggle('red');
+    }
+  } else if (guess === 'yes' || guess === 'y') {
+    console.log(quiz[i], guess, ': Correct!');
+    quizQuestionsHtml[i].classList.toggle('green');
   } else {
-    console.log(quiz[0], answer1,': Incorrect!');
-    quizQuestionsHtml[0].classList.toggle('red');
+    console.log(quiz[i], guess, ': Incorrect!');
+    quizQuestionsHtml[i].classList.toggle('red');
   }
-  quizQuestionsHtml[0].innerHTML += `&nbsp;&nbsp;&nbsp;${answer1}`;
-  var answer2 = prompt(quiz[1]);
-  answer2 = answer2.toLowerCase();
-  if (answer2 === 'no' || answer2 === 'n') {
-    console.log(quiz[1], answer2,': Correct!');
-    quizQuestionsHtml[1].classList.toggle('green');
-  } else {
-    console.log(quiz[1], answer2,': Incorrect!');
-    quizQuestionsHtml[1].classList.toggle('red');
-  }
-  quizQuestionsHtml[1].innerHTML += `&nbsp;&nbsp;&nbsp;${answer2}`;
-  var answer3 = prompt(quiz[2]);
-  answer3 = answer3.toLowerCase();
-  if (answer3 === 'yes' || answer3 === 'y' || answer3 === 'no' || answer3 === 'n') {
-    console.log(quiz[2], answer3,': Correct!');
-    quizQuestionsHtml[2].classList.toggle('green');
-  } else {
-    console.log(quiz[2], answer3,': Incorrect!');
-    quizQuestionsHtml[2].classList.toggle('red');
-  }
-  quizQuestionsHtml[2].innerHTML += `&nbsp;&nbsp;&nbsp;${answer3}`;
-  var answer4 = prompt(quiz[3]);
-  answer4 = answer4.toLowerCase();
-  if (answer4 === 'yes' || answer4 === 'y') {
-    console.log(quiz[3], answer4,': Correct!');
-    quizQuestionsHtml[3].classList.toggle('green');
-  } else {
-    console.log(quiz[3], answer4,': Incorrect!');
-    quizQuestionsHtml[3].classList.toggle('red');
-  }
-  quizQuestionsHtml[3].innerHTML += `&nbsp;&nbsp;&nbsp;${answer4}`;
-  var answer5 = prompt(quiz[4]);
-  answer5 = answer5.toLowerCase();
-  if (answer5 === 'yes' || answer5 === 'y') {
-    console.log(quiz[4], answer5,': Correct!');
-    quizQuestionsHtml[4].classList.toggle('green');
-  } else {
-    console.log(quiz[4], answer5,': Incorrect!');
-    quizQuestionsHtml[4].classList.toggle('red');
-  }
-  quizQuestionsHtml[4].innerHTML += `&nbsp;&nbsp;&nbsp;${answer5}`;
-};
-
-quizHtml.innerHTML = `<li class='quiz-question'>${quiz[0]}</li>`;
-quizHtml.innerHTML += `<li class='quiz-question'>${quiz[1]}</li>`;
-quizHtml.innerHTML += `<li class='quiz-question'>${quiz[2]}</li>`;
-quizHtml.innerHTML += `<li class='quiz-question'>${quiz[3]}</li>`;
-quizHtml.innerHTML += `<li class='quiz-question'>${quiz[4]}</li>`;
-
-setTimeout((() => quizQuestions()), 2000);
-
-// quizHtml.innerHTML = `<li class='quiz-question'>${quiz[0][0]}</li><input type='text' class='quiz-answer'>`;
-// quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][1]}</li><input type='text' class='quiz-answer'>`;
-// quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][2]}</li><input type='text' class='quiz-answer'>`;
-// quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][3]}</li><input type='text' class='quiz-answer'>`;
-// quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][4]}</li><input type='text' class='quiz-answer'>`;
-
-
+  quizQuestionsHtml[i].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
+}
