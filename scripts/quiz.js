@@ -74,7 +74,7 @@ quizHtml.innerHTML += `<li class='quiz-question'>${quiz[2]}</li>`;
 quizHtml.innerHTML += `<li class='quiz-question'>${quiz[3]}</li>`;
 quizHtml.innerHTML += `<li class='quiz-question'>${quiz[4]}</li>`;
 
-window.setTimeout((() => quizQuestions()), 3000);
+setTimeout((() => quizQuestions()), 2000);
 
 // quizHtml.innerHTML = `<li class='quiz-question'>${quiz[0][0]}</li><input type='text' class='quiz-answer'>`;
 // quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][1]}</li><input type='text' class='quiz-answer'>`;
