@@ -6,6 +6,7 @@ var guess;
 var quizHtml = document.getElementById('js-questions');
 var quizQuestionsHtml = document.getElementsByClassName('quiz-question');
 var quizUserHtml = document.getElementById('quiz-user');
+var scoreEl = document.getElementById('score');
 var quiz = [
   [
     [
@@ -113,8 +114,11 @@ for (var i = 0; i < 4; i++) {
     }
     if (pointsGained === true) {
       quizQuestionsHtml[currentQuestion].classList.toggle('green');
+      score++;
     } else {
       quizQuestionsHtml[currentQuestion].classList.toggle('red');
     }
   }
 }
+
+scoreEl.innerHTML += (' ' + score);

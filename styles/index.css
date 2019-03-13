@@ -163,7 +163,8 @@ main {
 
 .title,
 .quiz-user,
-.quiz-instructions {
+.quiz-instructions,
+.score {
     width: 50%;
     margin: auto;
 }
@@ -180,6 +181,11 @@ main {
 
 .quiz-instructions {
     font-size: 1.5em;
+}
+
+.score {
+    font-size: 1.8em;
+    line-height: 1.8em;
 }
 
 ol.js-questions .quiz-question {
