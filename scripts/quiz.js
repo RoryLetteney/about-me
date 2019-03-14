@@ -98,7 +98,7 @@ var runQuiz = function() {
   for (var i = 0; i < 4; i++) {
     var correctGuess = false;
     guess = prompt(quiz[2][0]);
-    guess = guess.toString().toLowerCase();
+    guess = guess.toLowerCase();
     for (var mc = 0; mc < quiz[2][1].length; mc++) {
       if (guess === quiz[2][1][mc]) {
         pointsGained = true;
