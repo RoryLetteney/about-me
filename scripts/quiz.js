@@ -34,17 +34,20 @@ var quiz = [
       'colorado',
       'wisconsin',
       'illinois',
-      'north carolina'
+      'north carolina',
+      'iowa'
     ]
   ]
 ];
 
-var updateQuizHTML =function(question) {
+var updateQuizHTML = function(question) {
   quizHtml.innerHTML += `<li class='quiz-question'>${question}</li>`;
 };
+
 var updateQuizQuestionsHTML = function(answer) {
   quizQuestionsHtml[currentQuestion].innerHTML+= `&nbsp; &nbsp; &nbsp; ${answer}`;
 };
+
 var runQuiz = function() {
   quizUser = prompt('What is your name, user?');
   quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
@@ -67,7 +70,8 @@ var runQuiz = function() {
     }
 
   }());
-  (function numberGuess(){
+  
+  ( function numberGuess(){
     for (var num = 0; num < 1; num++) {
       var attempts = 4;
       var guesses = 0;
@@ -105,7 +109,7 @@ var runQuiz = function() {
     }
   }());
 
-  (function mulitpleChoice() {
+  ( function mulitpleChoice() {
     var pointsGained = false;
     updateQuizHTML(quiz[2][0]);
     for (var i = 0; i < 4; i++) {
@@ -134,7 +138,6 @@ var runQuiz = function() {
         }
       }
     }
-
   }());
 
   scoreEl.innerHTML += (' ' + score);
