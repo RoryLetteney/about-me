@@ -1,0 +1,53 @@
+/**************JS Questions**************/
+
+.js-questions {
+    font-size: 1.2em;
+    line-height: 30px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/***********QUIZ******************/
+
+.title,
+.quiz-user,
+.quiz-instructions,
+.score {
+    width: 50%;
+    margin: auto;
+}
+
+.title {
+    line-height: 3em;
+    font-size: 3em;
+}
+
+.quiz-user {
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.quiz-instructions {
+    font-size: 1.5em;
+}
+
+.score {
+    font-size: 1.8em;
+    line-height: 1.8em;
+}
+
+ol.js-questions .quiz-question {
+    list-style-position: inside;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.green {
+    background-color: green;
+    color: #fff;
+}
+
+.red {
+    background-color: red;
+    font-weight: 600;
+}
