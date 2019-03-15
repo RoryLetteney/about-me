@@ -44,7 +44,6 @@
     display: grid;
     grid-template-columns: repeat(autofill, 1fr);
     grid-template-rows: [s] 1fr [e];
-    grid-column-gap: 20px;
     justify-items: center;
     align-items: center;
 }
