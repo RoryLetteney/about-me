@@ -71,6 +71,19 @@ body {
     border-radius: 2px;
 }
 
+/**************JS Questions**************/
+
+.non-grid-main {
+    text-align: left;
+}
+
+.js-questions {
+    font-size: 1.2em;
+    line-height: 30px;
+    width: 50%;
+    margin: 20px auto;
+}
+
 /*******FOOTER*******/
 
 .footer {

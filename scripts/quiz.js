@@ -40,6 +40,12 @@ var quiz = [
       'north carolina',
       'iowa'
     ]
+  ],
+  [
+    {
+      '1': 'hello',
+      '2': 'goodbye'
+    }
   ]
 ];
 
@@ -48,7 +54,7 @@ var quiz = [
     if (typeof quiz[i][0] !== 'object') {
       quizQuestionCount++;
     } else {
-      quizQuestionCount += `${quiz[i][0].constructor === Object ? quiz[i][0].keys.length : quiz[i][0].length}`;
+      quizQuestionCount += parseInt(`${quiz[i][0].constructor === Object ? Object.keys(quiz[i][0]).length : quiz[i][0].length}`);
     }
   }
 }());
