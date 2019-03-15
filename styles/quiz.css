@@ -55,12 +55,3 @@ ol.js-questions .quiz-question {
     background-color: red;
     font-weight: 600;
 }
-
-/*********QUIZ FOOTER*********/
-
-.quiz-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    line-height: 30px;
-}

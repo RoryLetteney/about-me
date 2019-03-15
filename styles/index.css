@@ -40,7 +40,7 @@ body {
 .layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: [nav-s] 50px [nav-e main-s] 1fr 1fr [main-e footer-s] 50px [footer-e];
+    grid-template-rows: [nav-s] 50px [nav-e main-s] 1fr 1fr [main-e footer-s] 30px [footer-e];
 }
 
 .navbar {
@@ -57,7 +57,7 @@ body {
     grid-template-columns: [s] 1fr [e];
 
     margin-bottom: 32px;
-    min-height: calc(100vh - 132px);
+    min-height: calc(100vh - 112px);
 }
 
 .inner-gradient-border-div {
@@ -79,7 +79,7 @@ body {
     grid-row: s/e;
 }
 
-.footer {
+.grid-footer {
     grid-column: 1/-1;
     grid-row: footer-s/footer-e;
 
@@ -100,13 +100,11 @@ body {
     font-weight: 600;
 }
 
-.navbar-item {
+.navbar-item a {
+    display: block;
+    text-decoration: none;
     border: transparent 1px solid;
     padding: 0 10px;
-}
-
-.navbar-item a {
-    text-decoration: none;
 }
 
 .navbar-item, 
@@ -114,13 +112,13 @@ body {
     color: purple;
 }
 
-.navbar-item:focus,
-.navbar-item:hover {
+.navbar-item a:focus,
+.navbar-item a:hover {
     color: chartreuse;
     border: chartreuse 1px solid;
 }
 
-.selected {
+.selected a {
     border: purple 1px solid;
     border-radius: 2px;
 }
@@ -129,4 +127,11 @@ body {
 
 .footer {
     color: #555;
+}
+
+.non-grid-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;
 }
