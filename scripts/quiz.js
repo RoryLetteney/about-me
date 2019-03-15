@@ -54,35 +54,6 @@ var runQuiz = function() {
   quizUser = prompt('What is your name, user?');
   quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
 
-<<<<<<< HEAD
-  for (i = 0; i < quiz[0][0].length; i++) {
-    guess = prompt(quiz[0][0][i]);
-    quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][0][i]}</li>`;
-    guess = guess.toLowerCase();
-    if (quiz[0][1][i].includes(guess)) {
-      console.log(quiz[0][0][i], guess, ': Correct!');
-      quizQuestionsHtml[currentQuestion].classList.toggle('green');
-      score++;
-    } else {
-      console.log(quiz[0][0][i], guess, ': Incorrect!');
-      quizQuestionsHtml[currentQuestion].classList.toggle('red');
-    }
-    quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
-    currentQuestion++;
-    console.log(currentQuestion);
-  }
-
-  for (i = 0; i < 1; i++) {
-    var attempts = 4;
-    var guesses = 0;
-    var correctAnswer = quiz[1][1].toString();
-    quizHtml.innerHTML += `<li class='quiz-question'>${quiz[1][0]}</li>`;
-    while(guesses < attempts) {
-      guess = prompt(quiz[1][0]);
-      if (guess === quiz[1][1].toString()) {
-        console.log(quiz[1][0], guess, ': Correct!');
-        quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
-=======
   ( function yesNo() {
     for (var yn = 0; yn < quiz[0][0].length; yn++) {
       guess = prompt(quiz[0][0][yn]);
@@ -90,62 +61,17 @@ var runQuiz = function() {
       guess = guess.toLowerCase();
       if (quiz[0][1][yn].includes(guess)) {
         console.log(quiz[0][0][yn], guess, ': Correct!');
->>>>>>> d2e7344f76e11c3ce944ac00561f3338d81b9f69
         quizQuestionsHtml[currentQuestion].classList.toggle('green');
         score++;
-<<<<<<< HEAD
-        break;
-      } else if (guesses < attempts - 1 && correctAnswer !== guess) {
-        console.log(quiz[1][0], guess, ': Incorrect!');
-        if (guess > correctAnswer) {
-          alert(`Incorrect! The correct answer is lower than ${guess}.`);
-        } else {
-          alert(`Incorrect! The correct answer is higher than ${guess}.`);
-        }
-        guesses++;
-      } else if (guesses >= attempts - 1 && correctAnswer !== guess) {
-        quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
-        quizQuestionsHtml[currentQuestion].classList.toggle('red');
-        currentQuestion++;
-        break;
-=======
->>>>>>> d2e7344f76e11c3ce944ac00561f3338d81b9f69
       } else {
         console.log(quiz[0][0][yn], guess, ': Incorrect!');
         quizQuestionsHtml[currentQuestion].classList.toggle('red');
       }
-<<<<<<< HEAD
-      console.log(correctAnswer, '!==', guess);
-    }
-    console.log(guesses);
-  }
-
-  var pointsGained = false;
-  quizHtml.innerHTML += `<li class='quiz-question'>${quiz[2][0]}</li>`;
-  for (i = 0; i < 4; i++) {    
-    var correctGuess = false;
-    guess = prompt(quiz[2][0]);
-    guess = guess.toLowerCase();
-    for (a = 0; a < quiz[2][1].length; a++) {
-      if (guess === quiz[2][1][a]) {
-        pointsGained = true;
-        correctGuess = true;
-        alert('Correct!');
-      }
-    }
-    if (correctGuess === false) {
-      alert('Incorrect! Guess again!');
-    }
-    if (i === 3) {
-      for (a = 0; a < quiz[2][1].length; a++) {
-        quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${quiz[2][1][a]}`;
-=======
       updateQuizQuestionsHTML(guess);
       currentQuestion++;
     }
-
   }());
-  
+
   ( function numberGuess(){
     for (var num = 0; num < 1; num++) {
       var attempts = 4;
@@ -162,21 +88,19 @@ var runQuiz = function() {
           score++;
           guesses = attempts;
           break;
-        } else if (guesses < attempts -1 && correctAnswer !== guess) {
+        } else if (guesses >= attempts - 1 && correctAnswer !== guess) {
+          updateQuizQuestionsHTML(guess);
+          quizQuestionsHtml[currentQuestion].classList.toggle('red');
+          currentQuestion++;
+          break;
+        } else if (correctAnswer !== guess) {
           console.log(quiz[1][0], guess, ': Incorrect!');
           if (guess > correctAnswer) {
             alert(`Incorrect! The correct answer is lower than ${guess}.`);
           } else {
             alert(`Incorrect! The correct answer is higher than ${guess}.`);
           }
-          // eslint-disable-next-line no-debugger
-          debugger;
           guesses++;
-        } else if (guesses >= attempts -1 && correctAnswer !== guess) {
-          updateQuizQuestionsHTML(guess);
-          quizQuestionsHtml[currentQuestion].classList.toggle('red');
-          currentQuestion++;
-          break;
         } else {
           guesses++;
         }
@@ -197,7 +121,6 @@ var runQuiz = function() {
           correctGuess = true;
           alert('Correct!');
         }
->>>>>>> d2e7344f76e11c3ce944ac00561f3338d81b9f69
       }
       if (correctGuess === false) {
         alert('Incorrect! Guess again!');
