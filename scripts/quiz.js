@@ -55,16 +55,16 @@ var runQuiz = function() {
   quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
 
   ( function yesNo() {
-    for (var yn = 0; yn < quiz[0][0].length; yn++) {
-      guess = prompt(quiz[0][0][yn]);
-      updateQuizHTML(quiz[0][0][yn]);
+    for (i = 0; i < quiz[0][0].length; i++) {
+      guess = prompt(quiz[0][0][i]);
+      updateQuizHTML(quiz[0][0][i]);
       guess = guess.toLowerCase();
-      if (quiz[0][1][yn].includes(guess)) {
-        console.log(quiz[0][0][yn], guess, ': Correct!');
+      if (quiz[0][1][i].includes(guess)) {
+        console.log(quiz[0][0][i], guess, ': Correct!');
         quizQuestionsHtml[currentQuestion].classList.toggle('green');
         score++;
       } else {
-        console.log(quiz[0][0][yn], guess, ': Incorrect!');
+        console.log(quiz[0][0][i], guess, ': Incorrect!');
         quizQuestionsHtml[currentQuestion].classList.toggle('red');
       }
       updateQuizQuestionsHTML(guess);
@@ -73,7 +73,7 @@ var runQuiz = function() {
   }());
 
   ( function numberGuess(){
-    for (var num = 0; num < 1; num++) {
+    for (i = 0; i < 1; i++) {
       var attempts = 4;
       var guesses = 0;
       var correctAnswer = quiz[1][1].toString();
@@ -111,12 +111,12 @@ var runQuiz = function() {
   ( function mulitpleChoice() {
     var pointsGained = false;
     updateQuizHTML(quiz[2][0]);
-    for (var i = 0; i < 4; i++) {
+    for (i = 0; i < 4; i++) {
       var correctGuess = false;
       guess = prompt(quiz[2][0]);
       guess = guess.toLowerCase();
-      for (var mc = 0; mc < quiz[2][1].length; mc++) {
-        if (guess === quiz[2][1][mc]) {
+      for (a = 0; a < quiz[2][1].length; a++) {
+        if (guess === quiz[2][1][a]) {
           pointsGained = true;
           correctGuess = true;
           alert('Correct!');
@@ -126,7 +126,7 @@ var runQuiz = function() {
         alert('Incorrect! Guess again!');
       }
       if (i === 3) {
-        for (var a = 0; a < quiz[2][1].length; a++) {
+        for (a = 0; a < quiz[2][1].length; a++) {
           updateQuizQuestionsHTML(quiz[2][1][a]);
         }
         if (pointsGained === true) {
