@@ -48,7 +48,7 @@ var quiz = [
     if (typeof quiz[i][0] !== 'object') {
       quizQuestionCount++;
     } else {
-      quizQuestionCount += `${quiz[i][0].constructor === Object ? quiz[i][0].keys.length : quiz[i][0].length}`
+      quizQuestionCount += `${quiz[i][0].constructor === Object ? quiz[i][0].keys.length : quiz[i][0].length}`;
     }
   }
 }());
