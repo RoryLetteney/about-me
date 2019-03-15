@@ -36,15 +36,25 @@ var quiz = [
       'colorado',
       'wisconsin',
       'illinois',
-      'north carolina'
+      'north carolina',
+      'iowa'
     ]
   ]
 ];
+
+var updateQuizHTML = function(question) {
+  quizHtml.innerHTML += `<li class='quiz-question'>${question}</li>`;
+};
+
+var updateQuizQuestionsHTML = function(answer) {
+  quizQuestionsHtml[currentQuestion].innerHTML+= `&nbsp; &nbsp; &nbsp; ${answer}`;
+};
 
 var runQuiz = function() {
   quizUser = prompt('What is your name, user?');
   quizUserHtml.innerHTML = `Hello, ${quizUser ? quizUser : 'user'}!`;
 
+<<<<<<< HEAD
   for (i = 0; i < quiz[0][0].length; i++) {
     guess = prompt(quiz[0][0][i]);
     quizHtml.innerHTML += `<li class='quiz-question'>${quiz[0][0][i]}</li>`;
@@ -72,9 +82,18 @@ var runQuiz = function() {
       if (guess === quiz[1][1].toString()) {
         console.log(quiz[1][0], guess, ': Correct!');
         quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${guess}`;
+=======
+  ( function yesNo() {
+    for (var yn = 0; yn < quiz[0][0].length; yn++) {
+      guess = prompt(quiz[0][0][yn]);
+      updateQuizHTML(quiz[0][0][yn]);
+      guess = guess.toLowerCase();
+      if (quiz[0][1][yn].includes(guess)) {
+        console.log(quiz[0][0][yn], guess, ': Correct!');
+>>>>>>> d2e7344f76e11c3ce944ac00561f3338d81b9f69
         quizQuestionsHtml[currentQuestion].classList.toggle('green');
-        currentQuestion++;
         score++;
+<<<<<<< HEAD
         break;
       } else if (guesses < attempts - 1 && correctAnswer !== guess) {
         console.log(quiz[1][0], guess, ': Incorrect!');
@@ -89,9 +108,13 @@ var runQuiz = function() {
         quizQuestionsHtml[currentQuestion].classList.toggle('red');
         currentQuestion++;
         break;
+=======
+>>>>>>> d2e7344f76e11c3ce944ac00561f3338d81b9f69
       } else {
-        guesses++;
+        console.log(quiz[0][0][yn], guess, ': Incorrect!');
+        quizQuestionsHtml[currentQuestion].classList.toggle('red');
       }
+<<<<<<< HEAD
       console.log(correctAnswer, '!==', guess);
     }
     console.log(guesses);
@@ -116,15 +139,82 @@ var runQuiz = function() {
     if (i === 3) {
       for (a = 0; a < quiz[2][1].length; a++) {
         quizQuestionsHtml[currentQuestion].innerHTML += `&nbsp;&nbsp;&nbsp;${quiz[2][1][a]}`;
-      }
-      if (pointsGained === true) {
-        quizQuestionsHtml[currentQuestion].classList.toggle('green');
-        score++;
-      } else {
-        quizQuestionsHtml[currentQuestion].classList.toggle('red');
+=======
+      updateQuizQuestionsHTML(guess);
+      currentQuestion++;
+    }
+
+  }());
+  
+  ( function numberGuess(){
+    for (var num = 0; num < 1; num++) {
+      var attempts = 4;
+      var guesses = 0;
+      var correctAnswer = quiz[1][1].toString();
+      updateQuizHTML(quiz[1][0]);
+      while(guesses < attempts) {
+        guess = prompt(quiz[1][0]);
+        if (guess === quiz[1][1].toString()) {
+          console.log(quiz[1][0], guess, ': Correct!');
+          updateQuizQuestionsHTML(guess);
+          quizQuestionsHtml[currentQuestion].classList.toggle('green');
+          currentQuestion++;
+          score++;
+          guesses = attempts;
+          break;
+        } else if (guesses < attempts -1 && correctAnswer !== guess) {
+          console.log(quiz[1][0], guess, ': Incorrect!');
+          if (guess > correctAnswer) {
+            alert(`Incorrect! The correct answer is lower than ${guess}.`);
+          } else {
+            alert(`Incorrect! The correct answer is higher than ${guess}.`);
+          }
+          // eslint-disable-next-line no-debugger
+          debugger;
+          guesses++;
+        } else if (guesses >= attempts -1 && correctAnswer !== guess) {
+          updateQuizQuestionsHTML(guess);
+          quizQuestionsHtml[currentQuestion].classList.toggle('red');
+          currentQuestion++;
+          break;
+        } else {
+          guesses++;
+        }
       }
     }
-  }
+  }());
+
+  ( function mulitpleChoice() {
+    var pointsGained = false;
+    updateQuizHTML(quiz[2][0]);
+    for (var i = 0; i < 4; i++) {
+      var correctGuess = false;
+      guess = prompt(quiz[2][0]);
+      guess = guess.toLowerCase();
+      for (var mc = 0; mc < quiz[2][1].length; mc++) {
+        if (guess === quiz[2][1][mc]) {
+          pointsGained = true;
+          correctGuess = true;
+          alert('Correct!');
+        }
+>>>>>>> d2e7344f76e11c3ce944ac00561f3338d81b9f69
+      }
+      if (correctGuess === false) {
+        alert('Incorrect! Guess again!');
+      }
+      if (i === 3) {
+        for (var a = 0; a < quiz[2][1].length; a++) {
+          updateQuizQuestionsHTML(quiz[2][1][a]);
+        }
+        if (pointsGained === true) {
+          quizQuestionsHtml[currentQuestion].classList.toggle('green');
+          score++;
+        } else {
+          quizQuestionsHtml[currentQuestion].classList.toggle('red');
+        }
+      }
+    }
+  }());
 
   scoreEl.innerHTML += (' ' + score);
 };
