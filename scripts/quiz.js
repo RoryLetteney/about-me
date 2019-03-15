@@ -1,6 +1,7 @@
 'use strict';
 var currentQuestion = 0;
 var score = 0;
+var quizQuestionCount = 0;
 var quizUser;
 var guess;
 var i;
@@ -41,6 +42,16 @@ var quiz = [
     ]
   ]
 ];
+
+(function getQuizQuestionCount() {
+  for (i = 0; i < quiz.length; i++) {
+    if (typeof quiz[i][0] !== 'object') {
+      quizQuestionCount++;
+    } else {
+      quizQuestionCount += `${quiz[i][0].constructor === Object ? quiz[i][0].keys.length : quiz[i][0].length}`
+    }
+  }
+}());
 
 var updateQuizHTML = function(question) {
   quizHtml.innerHTML += `<li class='quiz-question'>${question}</li>`;
@@ -139,7 +150,7 @@ var runQuiz = function() {
     }
   }());
 
-  scoreEl.innerHTML += (' ' + score);
+  scoreEl.innerHTML += ` ${score}/${quizQuestionCount}`;
 };
 
 setTimeout(() => runQuiz(), 5000);
