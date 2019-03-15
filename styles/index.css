@@ -13,7 +13,6 @@ body {
     text-align: center;    
     background-color: aliceblue;
     color: purple;
-    overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -92,11 +91,7 @@ body {
 
 .navbar {
     color: purple;
-}
-
-.navbar ul {
-    height: 40px;
-    margin-top: 10px;
+    line-height: 40px;
 }
 
 .navbar-item {
@@ -105,10 +100,13 @@ body {
     font-weight: 600;
 }
 
+.navbar-item {
+    border: transparent 1px solid;
+    padding: 0 10px;
+}
+
 .navbar-item a {
     text-decoration: none;
-    border: transparent 1px solid;
-    padding: 5px;
 }
 
 .navbar-item, 
@@ -116,13 +114,13 @@ body {
     color: purple;
 }
 
-.navbar-item a:focus,
-.navbar-item a:hover {
+.navbar-item:focus,
+.navbar-item:hover {
     color: chartreuse;
     border: chartreuse 1px solid;
 }
 
-.selected a {
+.selected {
     border: purple 1px solid;
     border-radius: 2px;
 }
@@ -130,6 +128,5 @@ body {
 /*******FOOTER*******/
 
 .footer {
-    height: 50px;
     color: #555;
 }
