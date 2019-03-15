@@ -40,12 +40,6 @@ var quiz = [
       'north carolina',
       'iowa'
     ]
-  ],
-  [
-    {
-      '1': 'hello',
-      '2': 'goodbye'
-    }
   ]
 ];
 
