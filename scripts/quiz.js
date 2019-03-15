@@ -120,9 +120,10 @@ var runQuiz = function() {
   }());
 
   ( function mulitpleChoice() {
+    var attempts = 4;
     var pointsGained = false;
     updateQuizHTML(quiz[2][0]);
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < attempts; i++) {
       var correctGuess = false;
       guess = prompt(quiz[2][0]);
       guess = guess.toLowerCase();
@@ -136,7 +137,7 @@ var runQuiz = function() {
       if (correctGuess === false) {
         alert('Incorrect! Guess again!');
       }
-      if (i === 3) {
+      if (i >= attempts - 1) {
         for (a = 0; a < quiz[2][1].length; a++) {
           updateQuizQuestionsHTML(quiz[2][1][a]);
         }
