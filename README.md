@@ -5,3 +5,5 @@ This is how you can learn all about me.
 For example, I can now clone in GitHub.
 
 Let's add these changes!
+## Driver Floyd
+## Navigator Rory

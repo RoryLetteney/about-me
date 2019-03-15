@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset='utf-8'/>
+       <meta name="language" content="english">
+       <meta name='viewport' content='width=device-width, initial-scale=1'/>
+       <title>About Me</title>
+       <link rel="stylesheet" href="styles/reset.css"/>
+       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+       <link rel='stylesheet' href='styles/index.css'/>
+   </head>
+   <body>
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-item"><a href="index.html">Home</a></li>
+                <li class="navbar-item"><a href="empty.html">Empty</a></li>
+                <li class="navbar-item"><a href="questions.html">Questions</a></li>
+                <li class="navbar-item selected"><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <main class="main">     
+            <h1 class="title">Programming Quiz!</h1>
+            <h2 id="quiz-user" class="quiz-user"></h2>
+            <p class="quiz-instructions">For this quiz you will show your knowledge by answering the following questions using 'yes/no' or 'y/n.' Case is irrelevant.</p>
+            <ol id="js-questions" class="js-questions">
+            </ol>
+            <h3 id="score" class="score">Score:</h3>
+        </main>
+        <footer class="footer">Copyright &copy; Rory Letteney 2019</footer>
+        <script src='scripts/quiz.js'></script>
+   </body>
+</html>
