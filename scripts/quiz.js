@@ -43,16 +43,6 @@ var quiz = [
   ]
 ];
 
-(function getQuizQuestionCount() {
-  for (i = 0; i < quiz.length; i++) {
-    if (typeof quiz[i][0] !== 'object') {
-      quizQuestionCount++;
-    } else {
-      quizQuestionCount += parseInt(`${quiz[i][0].constructor === Object ? Object.keys(quiz[i][0]).length : quiz[i][0].length}`);
-    }
-  }
-}());
-
 var updateQuizHTML = function(question) {
   quizHtml.innerHTML += `<li class='quiz-question'>${question}</li>`;
 };
@@ -60,6 +50,16 @@ var updateQuizHTML = function(question) {
 var updateQuizQuestionsHTML = function(answer) {
   quizQuestionsHtml[currentQuestion].innerHTML+= `&nbsp; &nbsp; &nbsp; ${answer}`;
 };
+
+(function getQuizQuestionCount() {
+  for (i = 0; i < quiz.length; i++) {
+    if (typeof quiz[i][0] !== 'object') {
+      quizQuestionCount++;
+    } else {
+      quizQuestionCount += (quiz[i][0].constructor === Object ? Object.keys(quiz[i][0]).length : quiz[i][0].length);
+    }
+  }
+}());
 
 var runQuiz = function() {
   quizUser = prompt('What is your name, user?');
