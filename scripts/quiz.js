@@ -51,6 +51,10 @@ var updateQuizQuestionsHTML = function(answer) {
   quizQuestionsHtml[currentQuestion].innerHTML+= `&nbsp; &nbsp; &nbsp; ${answer}`;
 };
 
+var toggleBackgroundColor = function(index, correct) {
+  quizQuestionsHtml[index].classList.toggle(`${correct ? 'green' : 'red'}`);
+};
+
 (function getQuizQuestionCount() {
   for (i = 0; i < quiz.length; i++) {
     if (typeof quiz[i][0] !== 'object') {
@@ -72,11 +76,11 @@ var runQuiz = function() {
       guess = guess.toLowerCase();
       if (quiz[0][1][i].includes(guess)) {
         console.log(quiz[0][0][i], guess, ': Correct!');
-        quizQuestionsHtml[currentQuestion].classList.toggle('green');
+        toggleBackgroundColor(currentQuestion, true);
         score++;
       } else {
         console.log(quiz[0][0][i], guess, ': Incorrect!');
-        quizQuestionsHtml[currentQuestion].classList.toggle('red');
+        toggleBackgroundColor(currentQuestion, false);
       }
       updateQuizQuestionsHTML(guess);
       currentQuestion++;
@@ -94,14 +98,14 @@ var runQuiz = function() {
         if (guess === quiz[1][1].toString()) {
           console.log(quiz[1][0], guess, ': Correct!');
           updateQuizQuestionsHTML(guess);
-          quizQuestionsHtml[currentQuestion].classList.toggle('green');
+          toggleBackgroundColor(currentQuestion, true);
           currentQuestion++;
           score++;
           guesses = attempts;
           break;
         } else if (guesses >= attempts - 1 && correctAnswer !== guess) {
           updateQuizQuestionsHTML(guess);
-          quizQuestionsHtml[currentQuestion].classList.toggle('red');
+          toggleBackgroundColor(currentQuestion, false);
           currentQuestion++;
           break;
         } else if (correctAnswer !== guess) {
@@ -142,10 +146,10 @@ var runQuiz = function() {
           updateQuizQuestionsHTML(quiz[2][1][a]);
         }
         if (pointsGained === true) {
-          quizQuestionsHtml[currentQuestion].classList.toggle('green');
+          toggleBackgroundColor(currentQuestion, true);
           score++;
         } else {
-          quizQuestionsHtml[currentQuestion].classList.toggle('red');
+          toggleBackgroundColor(currentQuestion, false);
         }
       }
     }
