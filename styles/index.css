@@ -5,11 +5,12 @@ html {
   font-size: 62.5%;
   font-family: "Raleway";
   color: #333;
-  scroll-behavior: smooth;
 }
 
 .background {
-  background: linear-gradient(to bottom, black, white 20%, white 80%, black 100%);
+  background: url(../img/rolands-varsbergs-1436746-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0.2;
   position: fixed;
   top: 0;
@@ -28,57 +29,22 @@ a:visited {
   color: #333;
 }
 
-.sidebar,
-.main,
-.main__section,
-.footer {
-  box-sizing: border-box;
-}
-
-.sidebar,
-.footer {
-  max-width: 10vw;
-  padding-left: 15px;
-  position: fixed;
-}
-
-/*******************SIDEBAR*****************/
-
-.sidebar {
-  min-height: 95vh;
-  padding-top: 15px;
-
-  font-size: 1.6em;
-  line-height: 2em;
-  font-weight: bold;
-}
-
-.sidebar__link a {
-  display: block;
-  width: 10vw;
-  text-align: center;
-}
-
-.sidebar__link a:hover {
-  background-color: #333;
-  color: white;
-}
-
 /*******************MAIN*****************/
 
 .main {
-  float: right;
-  max-width: calc(90vw - 15px);
+  min-height: 95vh;
+  width: 90vw;
+  margin: auto;
+  padding-bottom: 60px;
 }
 
 .main__section {
-  min-height: 100vh;
   padding: 30px;
+  border-top: 2px solid black;
 }
 
 .main__section__title {
     font-size: 4em;
-    padding-top: 20vh;
     text-align: center;
     text-decoration: underline;
     text-decoration-color: #333;
@@ -93,6 +59,10 @@ a:visited {
 
 .introduction {
   text-align: center;
+  height: 100vh;
+  padding: 25vh 0 0 0;
+  box-sizing: border-box;
+  border-top: none;
 }
 
 .introduction__job-title {
@@ -110,18 +80,24 @@ a:visited {
 
 /*******************TOOLKIT*****************/
 
+.toolkit {
+  background-color: ghostwhite;
+}
+
 .toolkit__tools {
   width: 50%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-row-gap: 30px;
-  justify-items: center;
   padding-top: 30px;
+  clear: both;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr;
 }
 
 .toolkit__tool {
-  width: 75px;
+  width: 50px;
+  grid-row: 1/-1;
 }
 
 /*******************PROJECTS*****************/
@@ -132,7 +108,7 @@ a:visited {
 }
 
 .project {
-  background-color: white;
+  background-color: ghostwhite;
   border-radius: 5px;
   margin-bottom: 10px;
   -webkit-column-break-inside: avoid;
@@ -159,6 +135,16 @@ a:visited {
   -webkit-transform-origin: 0 0;
   transform: scale(0.25);
   transform-origin: 0 0;
+  width: 1440px;
+}
+
+.thumbnail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .thumbnail iframe {
@@ -189,5 +175,10 @@ a:visited {
 
 .footer {
   min-height: 5vh;
-  bottom: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.footer-paragraph:first-of-type {
+  padding-bottom: 5px;
 }
