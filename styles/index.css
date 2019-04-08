@@ -1,6 +1,29 @@
+
+/*******************GENERAL*****************/
+
 html {
   font-size: 62.5%;
   font-family: "Raleway";
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.background {
+  background: linear-gradient(to bottom, black, white 20%, white 80%, black 100%);
+  opacity: 0.2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
   color: #333;
 }
 
@@ -13,32 +36,96 @@ html {
 
 .sidebar,
 .footer {
-  width: 10vw;
-  padding: 15px;
+  max-width: 10vw;
+  padding-left: 15px;
+  position: fixed;
 }
 
+/*******************SIDEBAR*****************/
+
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-height: 98vh;
+  min-height: 95vh;
+  padding-top: 15px;
 
   font-size: 1.6em;
   line-height: 2em;
+  font-weight: bold;
 }
+
+.sidebar__link a {
+  display: block;
+  width: 10vw;
+  text-align: center;
+}
+
+.sidebar__link a:hover {
+  background-color: #333;
+  color: white;
+}
+
+/*******************MAIN*****************/
 
 .main {
   float: right;
-  width: 90vw;
+  max-width: calc(90vw - 15px);
 }
 
 .main__section {
   min-height: 100vh;
+  padding: 30px;
 }
 
+.main__section__title {
+    font-size: 4em;
+    padding-top: 20vh;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #333;
+}
+
+/*******************INTRODUCTION*****************/
+
+.introduction__job-title,
+.introduction__bio {
+  padding-top: 15px;
+}
+
+.introduction {
+  text-align: center;
+}
+
+.introduction__job-title {
+  font-size: 2em;
+}
+
+.introduction__bio {
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+/*******************TOOLKIT*****************/
+
+.toolkit__tools {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 30px;
+  justify-items: center;
+  padding-top: 30px;
+}
+
+.toolkit__tool {
+  width: 75px;
+}
+
+/*******************FOOTER*****************/
+
 .footer {
-  position: fixed;
+  min-height: 5vh;
   bottom: 0;
-  left: 0;
-  height: 2vh;
 }
