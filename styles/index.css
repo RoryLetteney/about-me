@@ -177,6 +177,31 @@ a:visited {
   min-height: 5vh;
   text-align: center;
   box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.contact-info,
+.contact-info p,
+.footer-paragraph {
+  box-sizing: border-box;
+}
+
+.contact-info {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.contact-info p {
+  line-height: 1.5em;
+}
+
+.contact-info a {
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  color: #001aff;
 }
 
 .footer-paragraph:first-of-type {
