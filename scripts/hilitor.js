@@ -8,20 +8,20 @@ function Hilitor(tag)
 
   // private variables
   var targetNode = document.body;
-  var hiliteTag = tag || "MARK";
-  var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
-  var colors = ["#001aff"];
+  var hiliteTag = tag || 'MARK';
+  var skipTags = new RegExp('^(?:' + hiliteTag + '|SCRIPT|FORM|SPAN)$');
+  var colors = ['#001aff'];
   var wordColor = [];
   var colorIdx = 0;
-  var matchRegExp = "";
+  var matchRegExp = '';
   var openLeft = false;
   var openRight = false;
 
   // characters to strip from start and end of the input string
-  var endRegExp = new RegExp('^[^\\w]+|[^\\w]+$', "g");
+  var endRegExp = new RegExp('^[^\\w]+|[^\\w]+$', 'g');
 
   // characters used to break up the input string into words
-  var breakRegExp = new RegExp('[^\\w\'-]+', "g");
+  var breakRegExp = new RegExp('[^\\w\'-]+', 'g');
 
   this.setEndRegExp = function(regex) {
     endRegExp = regex;
@@ -37,36 +37,36 @@ function Hilitor(tag)
   {
     switch(type)
     {
-      case "left":
-        this.openLeft = false;
-        this.openRight = true;
-        break;
+    case 'left':
+      this.openLeft = false;
+      this.openRight = true;
+      break;
 
-      case "right":
-        this.openLeft = true;
-        this.openRight = false;
-        break;
+    case 'right':
+      this.openLeft = true;
+      this.openRight = false;
+      break;
 
-      case "open":
-        this.openLeft = this.openRight = true;
-        break;
+    case 'open':
+      this.openLeft = this.openRight = true;
+      break;
 
-      default:
-        this.openLeft = this.openRight = false;
+    default:
+      this.openLeft = this.openRight = false;
 
     }
   };
 
   this.setRegex = function(input)
   {
-    input = input.replace(endRegExp, "");
-    input = input.replace(breakRegExp, "|");
-    input = input.replace(/^\||\|$/g, "");
+    input = input.replace(endRegExp, '');
+    input = input.replace(breakRegExp, '|');
+    input = input.replace(/^\||\|$/g, '');
     if(input) {
-      var re = "(" + input + ")";
-      if(!this.openLeft) re = "\\b" + re;
-      if(!this.openRight) re = re + "\\b";
-      matchRegExp = new RegExp(re, "i");
+      var re = '(' + input + ')';
+      if(!this.openLeft) re = '\\b' + re;
+      if(!this.openRight) re = re + '\\b';
+      matchRegExp = new RegExp(re, 'i');
       return matchRegExp;
     }
     return false;
@@ -75,14 +75,16 @@ function Hilitor(tag)
   this.getRegex = function()
   {
     var retval = matchRegExp.toString();
-    retval = retval.replace(/(^\/(\\b)?|\(|\)|(\\b)?\/i$)/g, "");
-    retval = retval.replace(/\|/g, " ");
+    retval = retval.replace(/(^\/(\\b)?|\(|\)|(\\b)?\/i$)/g, '');
+    retval = retval.replace(/\|/g, ' ');
     return retval;
   };
 
   // recursively apply word highlighting
   this.hiliteWords = function(node)
   {
+    var nv;
+    var regs;
     if(node === undefined || !node) return;
     if(!matchRegExp) return;
     if(skipTags.test(node.nodeName)) return;
@@ -100,18 +102,19 @@ function Hilitor(tag)
         var match = document.createElement(hiliteTag);
         match.appendChild(document.createTextNode(regs[0]));
         match.style.backgroundColor = wordColor[regs[0].toLowerCase()];
-        match.style.color = "#000";
+        match.style.color = '#fff';
 
         var after = node.splitText(regs.index);
         after.nodeValue = after.nodeValue.substring(regs[0].length);
         node.parentNode.insertBefore(match, after);
       }
-    };
+    }
   };
 
   // remove highlighting
   this.remove = function()
   {
+    var el;
     var arr = document.getElementsByTagName(hiliteTag);
     while(arr.length && (el = arr[0])) {
       var parent = el.parentNode;
@@ -123,7 +126,6 @@ function Hilitor(tag)
   // start highlighting at target node
   this.apply = function(input)
   {
-    this.remove();
     if(input === undefined || !input) return;
     if(this.setRegex(input)) {
       this.hiliteWords(targetNode);
