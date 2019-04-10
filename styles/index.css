@@ -80,6 +80,10 @@ a:visited {
   margin-right: 10%;
 }
 
+.introduction__name {
+  text-decoration: none;
+}
+
 .introduction__job-title {
   font-size: 2.5em;
 }
