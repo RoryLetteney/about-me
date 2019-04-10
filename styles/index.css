@@ -43,6 +43,8 @@ mark {
   width: 90vw;
   margin: auto;
   padding-bottom: 60px;
+  opacity: 0;
+  transition: all 1s ease;
 }
 
 .main__section {
@@ -174,7 +176,7 @@ mark {
   width: 1440px;
   height: 900px;
   opacity: 0;
-  transition: all 250ms ease;
+  transition: all 1s ease;
 }
 
 .thumbnail-link {
