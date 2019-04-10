@@ -1,0 +1,22 @@
+
+/*******************MAIN*****************/
+
+.main {
+  min-height: 95vh;
+  width: 90vw;
+  margin: auto;
+  padding-bottom: 60px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.main__section {
+  padding: 30px;
+  border-top: 2px solid black;
+}
+
+.main__section__title {
+    font-size: 4em;
+    text-align: center;
+    text-decoration-color: #333;
+}

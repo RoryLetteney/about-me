@@ -1,0 +1,71 @@
+
+/*******************PROJECTS*****************/
+
+.projects__projects {
+  column-count: 3;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.project {
+  background-color: rgba(248, 248, 255, 0.568);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  -webkit-column-break-inside: avoid;
+  border: 2px solid #333;
+}
+
+.thumbnail-container {
+  background-color: rgb(255, 255, 255);
+  width: calc(1440px * 0.25);
+  height: calc(900px * 0.25);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto 0;
+}
+
+.thumbnail {
+  position: relative;
+  -ms-zoom: 0.25;
+  -moz-transform: scale(0.25);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.25);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.25);
+  -webkit-transform-origin: 0 0;
+  transform: scale(0.25);
+  transform-origin: 0 0;
+  width: 1440px;
+}
+
+.thumbnail::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.thumbnail iframe {
+  width: 1440px;
+  height: 900px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.thumbnail-link {
+  font-size: 1.4em;
+  padding-top: 15px;
+  text-align: center;
+  display: block;
+}
+
+.thumbnail-description {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  padding-top: 5px;
+  text-align: justify;
+  box-sizing: border-box;
+  padding: 15px;
+}
