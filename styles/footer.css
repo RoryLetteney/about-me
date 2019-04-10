@@ -1,0 +1,42 @@
+
+/*******************FOOTER*****************/
+
+.footer {
+  min-height: 5vh;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.contact-info,
+.contact-info p,
+.footer-paragraph {
+  box-sizing: border-box;
+}
+
+.contact-info {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.contact-info p {
+  line-height: 1.5em;
+}
+
+.contact-info p:last-of-type {
+  padding-bottom: 5px;
+}
+
+.contact-method {
+  padding-right: 15px;
+}
+
+.social-media {
+  font-size: 1.6em;
+  padding: 0 5px;
+}
+
+.footer-paragraph:first-of-type {
+  padding-bottom: 5px;
+}
