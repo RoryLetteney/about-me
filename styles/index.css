@@ -63,6 +63,21 @@ a:visited {
   padding: 25vh 0 0 0;
   box-sizing: border-box;
   border-top: none;
+  clear: both;
+  overflow: hidden;
+}
+
+.introduction__pic {
+  float: left;
+  width: 25%;
+  border-radius: 50%;
+  margin-left: 10%;
+}
+
+.introduction__info {
+  float: right;
+  width: 55%;
+  margin-right: 10%;
 }
 
 .introduction__job-title {
@@ -71,7 +86,7 @@ a:visited {
 
 .introduction__bio {
   text-align: justify;
-  width: 50%;
+  width: 90%;
   margin: auto;
 
   font-size: 1.6em;
