@@ -1,5 +1,3 @@
-# about-me
-### Driver Floyd
-### Navigator Rory
+# My Portfolio
 
-This is a portfolio project showcasing my knowledge, my talents, and general information about me as a person.
+This portfolio showcases my knowledge, my talents, and general information about me as a person.
