@@ -218,6 +218,19 @@ mark {
   line-height: 1.5em;
 }
 
+.contact-info p:last-of-type {
+  padding-bottom: 5px;
+}
+
+.contact-method {
+  padding-right: 15px;
+}
+
+.social-media {
+  font-size: 1.6em;
+  padding: 0 5px;
+}
+
 .footer-paragraph:first-of-type {
   padding-bottom: 5px;
 }
