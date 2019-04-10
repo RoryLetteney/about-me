@@ -9,4 +9,5 @@
   hilitor.apply("scss");
   hilitor.apply("nodejs");
   hilitor.apply("heroku");
+  hilitor.apply("chartjs");
 }());

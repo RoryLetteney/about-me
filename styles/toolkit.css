@@ -5,6 +5,16 @@
   background-color: rgba(248, 248, 255, 0.568);
 }
 
+.toolkit__description {
+  font-size: 1.4em;
+  width: 40%;
+  margin: auto;
+  text-align: justify;
+  padding-top: 15px;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+
 .toolkit__tools {
   width: 50%;
   margin: auto;
