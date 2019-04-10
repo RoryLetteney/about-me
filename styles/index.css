@@ -32,6 +32,10 @@ a:hover {
   color: #001aff;
 }
 
+mark {
+  padding: 0 5px;
+}
+
 /*******************MAIN*****************/
 
 .main {
