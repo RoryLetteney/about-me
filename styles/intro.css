@@ -9,7 +9,6 @@
 .introduction {
   text-align: center;
   height: 100vh;
-  padding: 25vh 0 0 0;
   box-sizing: border-box;
   border-top: none;
   clear: both;
@@ -17,16 +16,13 @@
 }
 
 .introduction__pic {
-  float: left;
-  width: 25%;
   border-radius: 50%;
-  margin-left: 10%;
+  display: block;
+  margin: auto;
 }
 
 .introduction__info {
-  float: right;
-  width: 55%;
-  margin-right: 10%;
+  margin-top: 15px;
 }
 
 .introduction__job-title {
@@ -35,9 +31,6 @@
 
 .introduction__bio {
   text-align: justify;
-  width: 90%;
-  margin: auto;
-
   font-size: 1.6em;
   line-height: 2em;
   font-weight: 500;
