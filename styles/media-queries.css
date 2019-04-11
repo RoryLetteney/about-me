@@ -49,10 +49,20 @@
 
   .introduction__pic {
     margin-left: 10%;
+    float: left;
   }
 
   .introduction__info {
     float: right;
     margin-right: 10%;
+  }
+
+  .projects__projects {
+    column-count: 3;
+    column-gap: 15px;
+  }
+
+  .project {
+    -webkit-column-break-inside: avoid;
   }
 }
