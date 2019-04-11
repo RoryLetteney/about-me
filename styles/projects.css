@@ -13,7 +13,12 @@
   margin: 0 auto 15px;
 }
 
-.thumbnail-container {
+.thumbnail-image {
+  width: 100%;
+  border-bottom: 2px solid #333;
+}
+
+/* .thumbnail-container {
   background-color: rgb(255, 255, 255);
   width: calc(1440px * 0.25);
   height: calc(900px * 0.25);
@@ -50,10 +55,11 @@
   height: 900px;
   opacity: 0;
   transition: all 1s ease;
-}
+} */
 
 .thumbnail-link {
   font-size: 1.4em;
+  font-weight: bold;
   padding-top: 15px;
   text-align: center;
   display: block;
