@@ -3,12 +3,17 @@
 
 .toolkit {
   background-color: rgba(248, 248, 255, 0.568);
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.toolkit__description,
+.toolkit__tools {
+  margin: auto;
 }
 
 .toolkit__description {
   font-size: 1.4em;
-  width: 40%;
-  margin: auto;
   text-align: justify;
   padding-top: 15px;
   line-height: 1.6em;
@@ -16,17 +21,12 @@
 }
 
 .toolkit__tools {
-  width: 50%;
-  margin: auto;
   padding-top: 30px;
-  clear: both;
-  overflow: hidden;
   display: grid;
-  justify-content: center;
+  justify-items: center;
   grid-template-rows: 1fr;
 }
 
 .toolkit__tool {
-  width: 50px;
   grid-row: 1/-1;
 }
