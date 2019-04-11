@@ -1,20 +1,18 @@
 
 /**************MEDIA QUERIES***********/
 
-@media only screen and (min-width: 425px) {
-  .col-p-1 { width: 8.33%; }
-  .col-p-2 { width: 16.66%; }
-  .col-p-3 { width: 25%; }
-  .col-p-4 { width: 33.33%; }
-  .col-p-5 { width: 41.66%; }
-  .col-p-6 { width: 50%; }
-  .col-p-7 { width: 58.33%; }
-  .col-p-8 { width: 66.66%; }
-  .col-p-9 { width: 75%; }
-  .col-p-10 { width: 83.33%; }
-  .col-p-11 { width: 91.66%; }
-  .col-p-12 { width: 100%; }
-}
+.col-p-1 { width: 8.33%; }
+.col-p-2 { width: 16.66%; }
+.col-p-3 { width: 25%; }
+.col-p-4 { width: 33.33%; }
+.col-p-5 { width: 41.66%; }
+.col-p-6 { width: 50%; }
+.col-p-7 { width: 58.33%; }
+.col-p-8 { width: 66.66%; }
+.col-p-9 { width: 75%; }
+.col-p-10 { width: 83.33%; }
+.col-p-11 { width: 91.66%; }
+.col-p-12 { width: 100%; }
 
 @media only screen and (min-width: 768px) {
   .col-t-1 { width: 8.33%; }
@@ -28,7 +26,24 @@
   .col-t-9 { width: 75%; }
   .col-t-10 { width: 83.33%; }
   .col-t-11 { width: 91.66%; }
-  .col-t-12 { width: 100%; }
+  .col-t-12 { width: 100%; }  
+
+  .thumbnail-container {
+    width: calc(1440px * 0.4);
+    height: calc(900px * 0.4);
+  }
+  
+  .thumbnail {
+    -ms-zoom: 0.4;
+    -moz-transform: scale(0.4);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.4);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.4);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.4);
+    transform-origin: 0 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -72,12 +87,26 @@
   .project {
     -webkit-column-break-inside: avoid;
   }
+
+  .thumbnail-container {
+    width: calc(1440px * 0.25);
+    height: calc(900px * 0.25);
+  }
+  
+  .thumbnail {
+    -ms-zoom: 0.25;
+    -moz-transform: scale(0.25);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.25);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.25);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.25);
+    transform-origin: 0 0;
+  }
 }
 
-@media only screen and (min-width: 1300px) {
-  .toolkit {
-    background: linear-gradient(to right, transparent 0%, rgba(248, 248, 255, 0.568) 10%, rgba(248, 248, 255, 0.568) 90%, transparent 100%);
-  }
+@media only screen and (min-width: 1200px) {
 
   .thumbnail-container {
     width: calc(1440px * 0.35);
@@ -85,7 +114,7 @@
   }
   
   .thumbnail {
-    -ms-zoom: 0.25;
+    -ms-zoom: 0.35;
     -moz-transform: scale(0.35);
     -moz-transform-origin: 0 0;
     -o-transform: scale(0.35);
@@ -94,5 +123,24 @@
     -webkit-transform-origin: 0 0;
     transform: scale(0.35);
     transform-origin: 0 0;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .col-l-1 { width: 8.33%; }
+  .col-l-2 { width: 16.66%; }
+  .col-l-3 { width: 25%; }
+  .col-l-4 { width: 33.33%; }
+  .col-l-5 { width: 41.66%; }
+  .col-l-6 { width: 50%; }
+  .col-l-7 { width: 58.33%; }
+  .col-l-8 { width: 66.66%; }
+  .col-l-9 { width: 75%; }
+  .col-l-10 { width: 83.33%; }
+  .col-l-11 { width: 91.66%; }
+  .col-l-12 { width: 100%; }
+
+  .toolkit {
+    background: linear-gradient(to right, transparent 0%, rgba(248, 248, 255, 0.568) 10%, rgba(248, 248, 255, 0.568) 90%, transparent 100%);
   }
 }
