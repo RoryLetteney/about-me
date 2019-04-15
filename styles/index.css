@@ -1,3 +1,9 @@
+/*
+  green = #0daa22
+  darkgrey = #262528
+  blue = 001aff
+*/
+
 @import "main.css";
 @import "intro.css";
 @import "toolkit.css";
@@ -10,23 +16,10 @@
 html {
   font-size: 62.5%;
   font-family: "Raleway";
-  color: #333;
 }
 
 body {
-  background: url(../img/rolands-varsbergs-1436746-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: -1;
+  background-color: #262528;  
 }
 
 a {

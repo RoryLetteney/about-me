@@ -10,8 +10,8 @@ function Hilitor(tag)
   var targetNode = document.body;
   var hiliteTag = tag || 'MARK';
   var skipTags = new RegExp('^(?:' + hiliteTag + '|SCRIPT|FORM|SPAN)$');
-  var colors = ['#001aff'];
-  var wordColor = [];
+  var colors = ['transparent'];
+  var wordColor = ['#0daa22'];
   var colorIdx = 0;
   var matchRegExp = '';
   var openLeft = false;
@@ -93,7 +93,7 @@ function Hilitor(tag)
       for(var i=0; i < node.childNodes.length; i++)
         this.hiliteWords(node.childNodes[i]);
     }
-    if(node.nodeType == 3) { // NODE_TEXT
+    if(node.nodeType === 3) { // NODE_TEXT
       if((nv = node.nodeValue) && (regs = matchRegExp.exec(nv))) {
         if(!wordColor[regs[0].toLowerCase()]) {
           wordColor[regs[0].toLowerCase()] = colors[colorIdx++ % colors.length];
@@ -102,7 +102,7 @@ function Hilitor(tag)
         var match = document.createElement(hiliteTag);
         match.appendChild(document.createTextNode(regs[0]));
         match.style.backgroundColor = wordColor[regs[0].toLowerCase()];
-        match.style.color = '#fff';
+        match.style.color = wordColor[0];
 
         var after = node.splitText(regs.index);
         after.nodeValue = after.nodeValue.substring(regs[0].length);
