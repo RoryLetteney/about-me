@@ -1,6 +1,10 @@
 
 /*******************TOOLKIT*****************/
 
+.toolkit {
+  position: relative;
+}
+
 .toolkit__article {
   display: grid;
   align-content: center;

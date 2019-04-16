@@ -3,6 +3,7 @@
 
 .projects {
   color: #fff;
+  position: relative;
 }
 
 .projects__projects {
@@ -13,6 +14,10 @@
 .project {
   margin: 0 auto 15px;
   border-bottom: 2px solid #0dcf27;
+}
+
+.project:last-of-type {
+  border-bottom: none;
 }
 
 .thumbnail-image {
