@@ -1,6 +1,11 @@
 
 /*******************PROJECTS*****************/
 
+.projects {
+  color: #fff;
+  background-color: green;
+}
+
 .projects__projects {
   padding-top: 30px;
   font-weight: 500;
@@ -16,6 +21,23 @@
 .thumbnail-image {
   width: 100%;
   border-bottom: 2px solid #333;
+}
+
+.thumbnail-link {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-top: 15px;
+  text-align: center;
+  display: block;
+}
+
+.thumbnail-description {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  padding-top: 5px;
+  text-align: justify;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 /* .thumbnail-container {
@@ -56,20 +78,3 @@
   opacity: 0;
   transition: all 1s ease;
 } */
-
-.thumbnail-link {
-  font-size: 1.4em;
-  font-weight: bold;
-  padding-top: 15px;
-  text-align: center;
-  display: block;
-}
-
-.thumbnail-description {
-  font-size: 1.2em;
-  line-height: 1.4em;
-  padding-top: 5px;
-  text-align: justify;
-  box-sizing: border-box;
-  padding: 15px;
-}
