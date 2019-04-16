@@ -14,7 +14,7 @@
 .col-p-11 { width: 91.66%; }
 .col-p-12 { width: 100%; }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .col-t-1 { width: 8.33%; }
   .col-t-2 { width: 16.66%; }
   .col-t-3 { width: 25%; }
@@ -30,28 +30,20 @@
 
   .toolkit__article {
     float: left;
-    
   }
 
-  /* .thumbnail-container {
-    width: calc(1440px * 0.4);
-    height: calc(900px * 0.4);
+  .thumbnail-link {
+    font-size: 1.8em;
+    line-height: 2em;
   }
-  
-  .thumbnail {
-    -ms-zoom: 0.4;
-    -moz-transform: scale(0.4);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.4);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.4);
-    -webkit-transform-origin: 0 0;
-    transform: scale(0.4);
-    transform-origin: 0 0;
-  } */
+
+  .thumbnail-description {
+    font-size: 1.6em;
+    line-height: 1.8em;
+  }
 }
 
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .col-1 { width: 8.33%; }
   .col-2 { width: 16.66%; }
   .col-3 { width: 25%; }
@@ -84,54 +76,13 @@
     margin-right: 10%;
   }
 
-  .projects__projects {
-    column-count: 2;
-    column-gap: 15px;
+  .thumbnail-image {
+    margin: auto;
+    display: block;
   }
-
-  .project {
-    -webkit-column-break-inside: avoid;
-  }
-
-  /* .thumbnail-container {
-    width: calc(1440px * 0.25);
-    height: calc(900px * 0.25);
-  }
-  
-  .thumbnail {
-    -ms-zoom: 0.25;
-    -moz-transform: scale(0.25);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.25);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.25);
-    -webkit-transform-origin: 0 0;
-    transform: scale(0.25);
-    transform-origin: 0 0;
-  } */
 }
 
-/* @media only screen and (min-width: 1200px) {
-
-  .thumbnail-container {
-    width: calc(1440px * 0.35);
-    height: calc(900px * 0.35);
-  }
-  
-  .thumbnail {
-    -ms-zoom: 0.35;
-    -moz-transform: scale(0.35);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.35);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.35);
-    -webkit-transform-origin: 0 0;
-    transform: scale(0.35);
-    transform-origin: 0 0;
-  }
-} */
-
-@media only screen and (min-width: 1300px) {
+@media (min-width: 1300px) {
   .col-l-1 { width: 8.33%; }
   .col-l-2 { width: 16.66%; }
   .col-l-3 { width: 25%; }
