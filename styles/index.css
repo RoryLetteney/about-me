@@ -3,7 +3,7 @@
   darkgrey = #262528
   blue = #001aff
 */
-
+@import "state.css";
 @import "main.css";
 @import "intro.css";
 @import "toolkit.css";
@@ -16,6 +16,7 @@
 html {
   font-size: 62.5%;
   font-family: "Raleway";
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,17 +27,25 @@ a {
   color: #0dcf27;
 }
 
-a:visited {  
-  color: #0dcf27;
-}
-
-a:hover {
-  color: #001aff;
-}
-
 mark {
   padding: 0 5px;
   font-weight: bold;
+}
+
+.traverse-sections {
+  height: 50px;
+  width: 200px;
+  background-color: #0dcf27;
+  border: none;
+  transition: transform 250ms ease;
+  color: #262528;
+  font-weight: bold;
+  font-size: 1.6em;
+  border-radius: 5px;
+  margin: auto;
+  display: block;
+  clear: both;
+  margin-bottom: 30px;
 }
 
 .bottom-skew {
