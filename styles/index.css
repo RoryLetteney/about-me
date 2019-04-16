@@ -16,6 +16,7 @@
 html {
   font-size: 62.5%;
   font-family: "Raleway";
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,6 +34,7 @@ mark {
 
 .traverse-sections {
   height: 50px;
+  width: 200px;
   background-color: #0dcf27;
   border: none;
   transition: transform 250ms ease;
@@ -43,6 +45,7 @@ mark {
   margin: auto;
   display: block;
   clear: both;
+  margin-bottom: 30px;
 }
 
 .bottom-skew {
