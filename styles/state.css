@@ -1,0 +1,12 @@
+a:visited {  
+  color: #0dcf27;
+}
+
+a:hover {
+  color: #001aff;
+}
+
+.traverse-sections:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

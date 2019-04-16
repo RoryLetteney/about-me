@@ -40,7 +40,7 @@
     float: left;
     border: none;
     padding: 0 15px;
-    height: 80vh;
+    height: 60vh;
   }
 
   .toolkit__article:not(:last-of-type) {
