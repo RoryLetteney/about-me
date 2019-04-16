@@ -9,6 +9,25 @@
   color: #fff;
 }
 
+.scroll-to-top {
+  font-size: 1.2em;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.scroll-to-top,
+.scroll-to-top:visited {
+  color: white;
+}
+
+.scroll-to-top:hover {
+  color: #001aff;
+}
+
+.fa-arrow-up {
+  padding-right: 5px;
+}
+
 .contact-info,
 .contact-info p,
 .footer-paragraph {
