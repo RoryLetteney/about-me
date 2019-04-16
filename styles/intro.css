@@ -44,3 +44,7 @@
   line-height: 2em;
   font-weight: 500;
 }
+
+.introduction__pic, .introduction__info {
+  margin-bottom: 30px;
+}
