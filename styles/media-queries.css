@@ -38,6 +38,13 @@
 
   .toolkit__article {
     float: left;
+    border: none;
+    padding: 0 15px;
+    height: 80vh;
+  }
+
+  .toolkit__article:not(:last-of-type) {
+    border-right: solid #0dcf27;
   }
 
   .thumbnail-link {
