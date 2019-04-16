@@ -2,9 +2,7 @@
 /*******************TOOLKIT*****************/
 
 .toolkit {
-  background-color: rgba(248, 248, 255, 0.568);
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  background: #0dcf27;
 }
 
 .toolkit__description,

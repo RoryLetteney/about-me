@@ -12,6 +12,7 @@
   margin: auto;
   padding: 30px;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .main__section__title {

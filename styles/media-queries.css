@@ -139,8 +139,4 @@
   .col-l-10 { width: 83.33%; }
   .col-l-11 { width: 91.66%; }
   .col-l-12 { width: 100%; }
-
-  .toolkit {
-    background: linear-gradient(to right, transparent 0%, rgba(248, 248, 255, 0.568) 10%, rgba(248, 248, 255, 0.568) 90%, transparent 100%);
-  }
 }

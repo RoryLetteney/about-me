@@ -11,7 +11,7 @@ function Hilitor(tag)
   var hiliteTag = tag || 'MARK';
   var skipTags = new RegExp('^(?:' + hiliteTag + '|SCRIPT|FORM|SPAN)$');
   var colors = ['transparent'];
-  var wordColor = ['#0daa22'];
+  var wordColor = ['#0dcf27'];
   var colorIdx = 0;
   var matchRegExp = '';
   var openLeft = false;
