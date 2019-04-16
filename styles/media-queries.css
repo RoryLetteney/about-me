@@ -28,6 +28,14 @@
   .col-t-11 { width: 91.66%; }
   .col-t-12 { width: 100%; }
 
+  .main__section__title {
+    font-size: 3em;
+  }
+
+  .introduction__job-title {
+    font-size: 2em;
+  }
+
   .toolkit__article {
     float: left;
   }
@@ -60,6 +68,10 @@
   .main {
     max-width: 1100px;
     margin: auto;
+  }
+
+  .main__section__title {
+    font-size: 4em;
   }
 
   .introduction {
