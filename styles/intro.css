@@ -21,7 +21,7 @@
   display: block;
   margin: auto;
   border: #fff solid;
-  max-width: 280px;
+  max-width: 25.454545454%;
 }
 
 .introduction__name,
@@ -35,12 +35,12 @@
 }
 
 .introduction__job-title {
-  font-size: 2.5em;
+  font-size: 1.6em;
 }
 
 .introduction__bio {
   text-align: justify;
-  font-size: 1.6em;
+  font-size: 1.4em;
   line-height: 2em;
   font-weight: 500;
 }

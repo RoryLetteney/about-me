@@ -12,8 +12,8 @@
 }
 
 .project {
-  margin: 0 auto 15px;
-  border-bottom: 2px solid #0dcf27;
+  margin: 0 auto 30px;
+  border-bottom: solid #0dcf27;
 }
 
 .project:last-of-type {
@@ -21,7 +21,6 @@
 }
 
 .thumbnail-image {
-  width: 100%;
   border-bottom: 2px solid #262528;
 }
 
@@ -39,43 +38,5 @@
   font-size: 1.2em;
   line-height: 1.4em;
   text-align: justify;
+  margin: auto;
 }
-
-/* .thumbnail-container {
-  background-color: rgb(255, 255, 255);
-  width: calc(1440px * 0.25);
-  height: calc(900px * 0.25);
-  overflow: hidden;
-  position: relative;
-  margin: 10px auto 0;
-}
-
-.thumbnail {
-  position: relative;
-  -ms-zoom: 0.25;
-  -moz-transform: scale(0.25);
-  -moz-transform-origin: 0 0;
-  -o-transform: scale(0.25);
-  -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.25);
-  -webkit-transform-origin: 0 0;
-  transform: scale(0.25);
-  transform-origin: 0 0;
-  width: 1440px;
-}
-
-.thumbnail::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.thumbnail iframe {
-  width: 1440px;
-  height: 900px;
-  opacity: 0;
-  transition: all 1s ease;
-} */
