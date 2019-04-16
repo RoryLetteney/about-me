@@ -7,17 +7,27 @@
 }
 
 .introduction {
+  color: white;
   text-align: center;
-  height: 100vh;
   box-sizing: border-box;
   clear: both;
   overflow: hidden;
+  background-color: #262528;
+  position: relative;
 }
 
 .introduction__pic {
   border-radius: 50%;
   display: block;
   margin: auto;
+  border: #fff solid;
+  max-width: 280px;
+}
+
+.introduction__name,
+.introduction__job-title {
+  color: #0dcf27;
+  font-weight: bold;
 }
 
 .introduction__info {

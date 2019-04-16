@@ -2,31 +2,33 @@
 /*******************TOOLKIT*****************/
 
 .toolkit {
-  background-color: rgba(248, 248, 255, 0.568);
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  position: relative;
 }
 
-.toolkit__description,
-.toolkit__tools {
-  margin: auto;
-}
-
-.toolkit__description {
-  font-size: 1.4em;
-  text-align: justify;
-  padding-top: 15px;
-  line-height: 1.6em;
-  font-weight: 500;
-}
-
-.toolkit__tools {
-  padding-top: 30px;
+.toolkit__article {
   display: grid;
+  align-content: center;
   justify-items: center;
-  grid-template-rows: 1fr;
+  height: 30vh;
+  box-sizing: border-box;
+  color: white;
+  border-bottom: solid #0dcf27;
 }
 
-.toolkit__tool {
-  grid-row: 1/-1;
+.toolkit__article:last-of-type {
+  border-bottom: none;
+}
+
+.toolkit__article i {
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+}
+
+.toolkit__article p {
+  padding-top: 30px;
+  box-sizing: border-box;
+  font-size: 1.4em;
+  line-height: 2em;
+  text-align: justify;
 }

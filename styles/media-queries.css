@@ -26,7 +26,12 @@
   .col-t-9 { width: 75%; }
   .col-t-10 { width: 83.33%; }
   .col-t-11 { width: 91.66%; }
-  .col-t-12 { width: 100%; }  
+  .col-t-12 { width: 100%; }
+
+  .toolkit__article {
+    float: left;
+    
+  }
 
   /* .thumbnail-container {
     width: calc(1440px * 0.4);
@@ -61,7 +66,7 @@
   .col-12 { width: 100%; }
 
   .main {
-    max-width: 1300px;
+    max-width: 1100px;
     margin: auto;
   }
 
@@ -139,8 +144,4 @@
   .col-l-10 { width: 83.33%; }
   .col-l-11 { width: 91.66%; }
   .col-l-12 { width: 100%; }
-
-  .toolkit {
-    background: linear-gradient(to right, transparent 0%, rgba(248, 248, 255, 0.568) 10%, rgba(248, 248, 255, 0.568) 90%, transparent 100%);
-  }
 }
