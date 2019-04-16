@@ -22,12 +22,12 @@ body {
   background-color: #262528;  
 }
 
-a {
-  color: #333;
+a {  
+  color: #0dcf27;
 }
 
-a:visited {
-  color: #333;
+a:visited {  
+  color: #0dcf27;
 }
 
 a:hover {
