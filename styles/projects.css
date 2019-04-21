@@ -3,7 +3,6 @@
 
 .projects {
   color: #fff;
-  position: relative;
 }
 
 .projects__projects {
@@ -13,26 +12,21 @@
 
 .project {
   margin: 0 auto 30px;
-  border-bottom: solid #0dcf27;
-}
-
-.project:last-of-type {
-  border-bottom: none;
 }
 
 .thumbnail-link {
-  padding-top: 15px;
   display: block;
-  font-size: 1.4em;
+  font-size: 2em;
+  line-height: 2em;
   font-weight: bold;
   text-align: center;
+  transition: all 400ms ease;
 }
 
 .thumbnail-description {
   box-sizing: border-box;
   padding: 15px;
-  font-size: 1.2em;
-  line-height: 1.4em;
-  text-align: justify;
+  font-size: 1.6em;
+  text-align: center;
   margin: auto;
 }

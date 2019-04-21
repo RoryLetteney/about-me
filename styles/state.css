@@ -1,9 +1,9 @@
 a:visited {  
-  color: #0dcf27;
+  color: #fff;
 }
 
 a:hover {
-  color: #001aff;
+  color: #0dcf27;
 }
 
 .traverse-sections:hover {
@@ -11,4 +11,9 @@ a:hover {
   cursor: pointer;
   background-color: #0dcf27;
   color: #262528;
+}
+
+.thumbnail-link:hover {
+  color: #262528;
+  background-color: #0dcf27;
 }
