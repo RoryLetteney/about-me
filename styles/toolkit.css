@@ -3,21 +3,18 @@
 
 .toolkit {
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
 }
 
 .toolkit__article {
   display: grid;
   align-content: center;
   justify-items: center;
-  height: 30vh;
   box-sizing: border-box;
   color: white;
-  border-bottom: solid #0dcf27;
-  margin-bottom: 30px;
-}
-
-.toolkit__article:last-of-type {
-  border-bottom: none;
 }
 
 .toolkit__article i {
