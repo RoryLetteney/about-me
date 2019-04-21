@@ -11,19 +11,30 @@
 
 .toolkit__article {
   display: grid;
-  align-content: center;
+  grid-template-rows: [space-s] 50px [space-e icon-s] 3em [icon-e title-s] 3em [title-e description-s] 1fr [description-e];
   justify-items: center;
   box-sizing: border-box;
-  color: white;
+  color: #fff;
 }
 
 .toolkit__article i {
+  grid-row: 2/3;
   width: 100%;
   font-size: 3em;
   text-align: center;
 }
 
+.toolkit__article h3 {
+  grid-row: 3/4;
+  font-size: 2em;
+  font-weight: bold;
+  color: #0dcf27;
+  height: 3em;
+  line-height: 3em;
+}
+
 .toolkit__article p {
+  grid-row: 4/-1;
   padding-top: 30px;
   box-sizing: border-box;
   font-size: 1.4em;
