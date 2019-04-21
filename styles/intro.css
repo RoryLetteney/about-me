@@ -26,8 +26,15 @@
 
 .introduction__name,
 .introduction__job-title {
-  color: #0dcf27;
   font-weight: bold;
+}
+
+.introduction__name {
+  font-size: 2.4em;
+}
+
+.introduction__name span {  
+  color: #0dcf27;
 }
 
 .introduction__info {
@@ -35,14 +42,15 @@
 }
 
 .introduction__job-title {
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 .introduction__bio {
   text-align: justify;
-  font-size: 1.4em;
+  font-size: 1.6em;
   line-height: 2em;
   font-weight: 500;
+  margin-top: 30px;
 }
 
 .introduction__pic, .introduction__info {

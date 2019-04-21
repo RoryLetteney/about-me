@@ -9,4 +9,6 @@ a:hover {
 .traverse-sections:hover {
   transform: scale(1.1);
   cursor: pointer;
+  background-color: #0dcf27;
+  color: #262528;
 }
