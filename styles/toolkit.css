@@ -3,28 +3,26 @@
 
 .toolkit {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .toolkit__article {
   display: grid;
-  grid-template-rows: [space-s] 50px [space-e icon-s] 3em [icon-e title-s] 3em [title-e description-s] 1fr [description-e];
+  grid-template-rows: [icon-s] 3em [icon-e title-s] 3em [title-e description-s] 1fr [description-e];
   justify-items: center;
   box-sizing: border-box;
   color: #fff;
 }
 
 .toolkit__article i {
-  grid-row: 2/3;
+  grid-row: 1/2;
   width: 100%;
   font-size: 3em;
   text-align: center;
 }
 
 .toolkit__article h3 {
-  grid-row: 3/4;
+  grid-row: 2/3;
   font-size: 2em;
   font-weight: bold;
   color: #0dcf27;
@@ -33,7 +31,7 @@
 }
 
 .toolkit__article p {
-  grid-row: 4/-1;
+  grid-row: 3/-1;
   padding-top: 30px;
   box-sizing: border-box;
   font-size: 1.4em;

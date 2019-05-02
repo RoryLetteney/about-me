@@ -36,6 +36,13 @@
     font-size: 2em;
   }
 
+  .toolkit {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    align-content: center;
+  }
+
   .thumbnail-image {
     margin: auto;
     display: block;
