@@ -2,7 +2,8 @@ a:visited {
   color: #fff;
 }
 
-a:hover {
+a:hover,
+.thumbnail-alt a:hover {
   color: #0dcf27;
 }
 

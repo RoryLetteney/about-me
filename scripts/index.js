@@ -2,5 +2,5 @@
 
 (function highlightKeywords() {
   const hilitor = new Hilitor();
-  hilitor.apply(`reactjs javascript html css scss nodejs heroku chartjs`);
+  hilitor.apply('reactjs javascript html css scss nodejs heroku chartjs postgresql api apis');
 }());
