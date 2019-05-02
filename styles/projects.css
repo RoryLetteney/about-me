@@ -29,3 +29,16 @@
   font-size: 1.6em;
   text-align: center;
 }
+
+.thumbnail-alt {
+  font-size: 3em;
+  margin: auto;
+  background-color: #fff;
+  color: #262528;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.thumbnail-alt a {
+  color: #262528;
+}
